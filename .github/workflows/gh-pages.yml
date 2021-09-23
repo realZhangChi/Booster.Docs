@@ -21,7 +21,7 @@ jobs:
           extended: true
 
       - name: Setup Docsy
-        run: git submodule update --init --recursive && sudo npm install -D --save autoprefixer && sudo npm install -D --save postcss-cli
+        run: git submodule update --init --recursive && sudo npm install -D --save autoprefixer && sudo npm install -D --save postcss-cli && sudo npm install -D --save postcss
 
       - name: Build
         env:
