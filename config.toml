@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://mauitoolkit.com"
 title = "Maui.Toolkit"
 
 enableRobotsTXT = true
