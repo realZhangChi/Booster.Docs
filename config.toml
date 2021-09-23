@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Goldydocs"
+title = "Maui.Toolkit"
 
 enableRobotsTXT = true
 
@@ -53,26 +53,18 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "Goldydocs"
-description = "A Docsy example site"
+title = "Maui.Toolkit"
+description = "A Toolkit for Maui."
 languageName ="English"
 # Weight used for sorting.
 weight = 1
-[languages.no]
-title = "Goldydocs"
-description = "Docsy er operativsystem for skyen"
-languageName ="Norsk"
-contentDir = "content/no"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
-
-[languages.fa]
-title = "اسناد گلدی"
-description = "یک نمونه برای پوسته داکسی"
-languageName ="فارسی"
-contentDir = "content/fa"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
+[languages.zh]
+title = "Maui.Toolkit"
+description = "Maui工具包"
+languageName ="简体中文"
+contentDir = "content/zh"
+time_format_default = "2006.02.01"
+time_format_blog = "2006.02.01"
 
 [markup]
   [markup.goldmark]
