@@ -14,17 +14,15 @@ description: >
 
 [Maui.Toolkit](https://github.com/realZhangChi/Maui.Toolkit)是 [.NET MAUI(.NET Multi-platform App UI)](https://github.com/dotnet/maui)的开发工具包，提供了跨平台开发常用的工具并对第三方SDK进行了封装，旨在使基于 .NET MAUI 的跨平台开发更轻松。
 
-## DON'T REPEAT YOURSELF
+## 最佳实践
+
+Maui.Toolkit 遵循最佳实践进行开发，提供**SOLID**开发体验。
+
+## 易于扩展
+
+Maui.Toolkit 依赖于 .NET 框架的依赖注入系统，可将任一服务替换为自定义的实现。
 
 Maui.Toolkit通过为第三方SDK创建原生绑定类库，实现了以原生方式来为MAUI应用程序集成第三方功能。
-
-Help your user know if your project will help them. Useful information can include: 
-
-* **What is it good for?**: What types of problems does your project solve? What are the benefits of using it?
-
-* **What is it not good for?**: For example, point out situations that might intuitively seem suited for your project, but aren't for some reason. Also mention known limitations, scaling issues, or anything else that might let your users know if the project is not for them.
-
-* **What is it *not yet* good for?**: Highlight any useful features that are coming soon.
 
 ## Where should I go next?
 
