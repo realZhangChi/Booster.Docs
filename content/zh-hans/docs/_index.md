@@ -10,4 +10,4 @@ menu:
 
 欢迎来到Maui.Toolkit文档库！
 
-[Maui.Toolkit](https://github.com/realZhangChi/Maui.Toolkit)是 [.NET MAUI(.NET Multi-platform App UI)](https://github.com/dotnet/maui)的开发工具包，提供了跨平台开发常用的工具及第三方SDK继承，旨在使基于 .NET MAUI 的跨平台开发更轻松。
+[Maui.Toolkit](https://github.com/realZhangChi/Maui.Toolkit)是 [.NET MAUI(.NET Multi-platform App UI)](https://github.com/dotnet/maui)的开发工具包，提供了跨平台开发常用的工具并对第三方SDK进行了封装，旨在使基于 .NET MAUI 的跨平台开发更轻松。
