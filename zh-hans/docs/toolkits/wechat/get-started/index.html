@@ -22,18 +22,18 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2021-10-14T00:00:00+00:00">
-<meta property="article:modified_time" content="2021-10-14T13:03:10+08:00"><meta property="og:site_name" content="Maui.Toolkit">
+<meta property="article:modified_time" content="2021-10-14T21:51:14+08:00"><meta property="og:site_name" content="Maui.Toolkit">
 <meta itemprop=name content="开始使用">
 <meta itemprop=description content="轻松配置您的项目使用开箱即用的 Maui.Toolkit.WeChat 工具包来集成微信开放平台功能。
 "><meta itemprop=datePublished content="2021-10-14T00:00:00+00:00">
-<meta itemprop=dateModified content="2021-10-14T13:03:10+08:00">
-<meta itemprop=wordCount content="60">
+<meta itemprop=dateModified content="2021-10-14T21:51:14+08:00">
+<meta itemprop=wordCount content="86">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="开始使用">
 <meta name=twitter:description content="轻松配置您的项目使用开箱即用的 Maui.Toolkit.WeChat 工具包来集成微信开放平台功能。
 ">
-<link rel=preload href=/scss/main.min.dc1fcbb449605c03c89d9195d8a4a7328a311699cc0850b95c4a5d2488542402.css as=style>
-<link href=/scss/main.min.dc1fcbb449605c03c89d9195d8a4a7328a311699cc0850b95c4a5d2488542402.css rel=stylesheet integrity>
+<link rel=preload href=/scss/main.min.e5506ba15e5edce7ffbfe43f73b2ee3475e1a7f27558e859c69945946688a2dc.css as=style>
+<link href=/scss/main.min.e5506ba15e5edce7ffbfe43f73b2ee3475e1a7f27558e859c69945946688a2dc.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q2868HEQK"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-5Q2868HEQK',{anonymize_ip:!1})}</script>
@@ -183,7 +183,32 @@
         <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>builder</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Build</span><span style=color:#000;font-weight:700>();</span>
     <span style=color:#000;font-weight:700>}</span>
 <span style=color:#000;font-weight:700>}</span>
-</code></pre></div>
+</code></pre></div><p>为使您的应用正常与微信进行交互，还需要针对移动平台进行一些特殊配置：</p>
+<ul class="nav nav-tabs" id=tabs-0 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-0-android-tab data-toggle=tab href=#tabs-0-android role=tab aria-controls=tabs-0-android aria-selected=true>
+Android
+</a>
+</li><li class=nav-item><a class=nav-link id=tabs-0-ios-tab data-toggle=tab href=#tabs-0-ios role=tab aria-controls=tabs-0-ios aria-selected=false>
+iOS
+</a>
+</li></ul>
+<div class=tab-content id=tabs-0-content>
+<div class="tab-pane fade show active" id=tabs-0-android role=tabpanel aria-labelled-by=tabs-0-android-tab>
+<br><ol>
+<li>在你的Maui项目的<code>/Platforms/Android/</code>目录下新建文件夹，命名为<code>WeChatApi</code></li>
+<li>在<code>WeChatApi</code>目录下新建类文件<code>WeChatEntryActivity.cs</code></li>
+<li>更改<code>WeChatEntryActivity.cs</code>的代码如下：</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#c4a000>
+</span><span style=color:#c4a000>[Activity(Name = &#34;Maui.Toolkit.Sample.WeChatApi.WeChatEntryActivity&#34;, Exported = true, TaskAffinity = &#34;Maui.Toolkit.Sample&#34;, LaunchMode = LaunchMode.SingleTask)]</span>
+<span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>WeChatEntryActivity</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#000>WeChat</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Platforms</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Android</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>WeChatApi</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>WeChatEntryActivity</span>
+<span style=color:#000;font-weight:700>{</span>
+<span style=color:#000;font-weight:700>}</span>
+
+</code></pre></div></div>
+<div class="tab-pane fade" id=tabs-0-ios role=tabpanel aria-labelled-by=tabs-0-ios-tab>
+<br><p><em>TODO</em></p>
+</div>
+</div>
 <style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style>
 <div class=d-print-none>
 <h2 class=feedback--title>Feedback</h2>
@@ -202,7 +227,7 @@ Sorry to hear that. Please <a href=https://github.com/USERNAME/REPOSITORY/issues
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
 2021.10.14
-: <a href=https://github.com/realZhangChi/Maui.Toolkit.Docs/commit/9270c5071a592cde98af25c5b8185e3ca83cde20>:memo: WeChat (9270c50)</a>
+: <a href=https://github.com/realZhangChi/Maui.Toolkit.Docs/commit/958965d0f29969bed992a3653a4541553d03bfec>:memo: android config (958965d)</a>
 </div>
 </div>
 </main>
