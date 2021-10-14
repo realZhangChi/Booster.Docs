@@ -1,9 +1,9 @@
 ---
-title: "简介"
-linkTitle: "简介"
-weight: 1
+title: "工具包"
+linkTitle: "工具包"
+weight: 2
 description: >
-  什么是**Maui.Toolkit**.
+  Maui开发工具包.
 ---
 
 ## MAUI
@@ -24,10 +24,10 @@ Maui.Toolkit 依赖于 .NET 框架的依赖注入系统，可将任一服务替�
 
 Maui.Toolkit通过为第三方SDK创建原生绑定类库，实现了以原生方式来为MAUI应用程序集成第三方功能。
 
-<!-- ## Where should I go next?
+## Where should I go next?
 
 Give your users next steps from the Overview. For example:
 
 * [Getting Started](/docs/getting-started/): Get started with $project
 * [Examples](/docs/examples/): Check out some example code!
- -->
+
