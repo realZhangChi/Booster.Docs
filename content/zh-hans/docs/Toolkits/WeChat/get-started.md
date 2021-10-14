@@ -55,3 +55,32 @@ public static class MauiProgram
     }
 }
 ```
+
+为使您的应用正常与微信进行交互，还需要针对移动平台进行一些特殊配置：
+
+{{< tabs Android iOS>}}
+
+{{% codetab %}}
+
+1. 在你的Maui项目的`/Platforms/Android/`目录下新建文件夹，命名为`WeChatApi`
+2. 在`WeChatApi`目录下新建类文件`WeChatEntryActivity.cs`
+3. 更改`WeChatEntryActivity.cs`的代码如下：
+
+``` C#
+
+[Activity(Name = "Maui.Toolkit.Sample.WeChatApi.WeChatEntryActivity", Exported = true, TaskAffinity = "Maui.Toolkit.Sample", LaunchMode = LaunchMode.SingleTask)]
+public class WeChatEntryActivity : WeChat.Platforms.Android.WeChatApi.WeChatEntryActivity
+{
+}
+
+```
+
+{{% /codetab %}}
+
+{{% codetab %}}
+
+*TODO*
+
+{{% /codetab %}}
+
+{{< /tabs >}}
