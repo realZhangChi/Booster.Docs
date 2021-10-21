@@ -16,18 +16,18 @@
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
 <title>工具包 | Maui.Toolkit</title>
-<meta name=description content="Maui开发工具包.
+<meta name=description content="Maui.Toolkit 集成了常用的第三方功能，开箱即用，提升你的开发效率。
 ">
 <meta property="og:title" content="工具包">
-<meta property="og:description" content="Maui开发工具包.
+<meta property="og:description" content="Maui.Toolkit 集成了常用的第三方功能，开箱即用，提升你的开发效率。
 ">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://docs.mauitoolkit.com/zh-hans/docs/toolkits/"><meta property="og:site_name" content="Maui.Toolkit">
 <meta itemprop=name content="工具包">
-<meta itemprop=description content="Maui开发工具包.
+<meta itemprop=description content="Maui.Toolkit 集成了常用的第三方功能，开箱即用，提升你的开发效率。
 "><meta name=twitter:card content="summary">
 <meta name=twitter:title content="工具包">
-<meta name=twitter:description content="Maui开发工具包.
+<meta name=twitter:description content="Maui.Toolkit 集成了常用的第三方功能，开箱即用，提升你的开发效率。
 ">
 <link rel=preload href=/scss/main.min.c1faedf8ffad73572d0e1e415dbba2f328cdbe3d77c6377df252c64584f4a222.css as=style>
 <link href=/scss/main.min.c1faedf8ffad73572d0e1e415dbba2f328cdbe3d77c6377df252c64584f4a222.css rel=stylesheet integrity>
@@ -89,14 +89,23 @@
 <a href=/zh-hans/docs/toolkits/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id=m-zh-hansdocstoolkits><span class=td-sidebar-nav-active-item>工具包</span></a>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zh-hansdocstoolkitswechat-li>
-<a href=/zh-hans/docs/toolkits/wechat/ title="微信 Maui.Toolkit.WeChat" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zh-hansdocstoolkitswechat><span>微信</span></a>
+<a href=/zh-hans/docs/toolkits/wechat/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zh-hansdocstoolkitswechat><span>微信</span></a>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-hansdocstoolkitswechatoverview-li>
 <a href=/zh-hans/docs/toolkits/wechat/overview/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zh-hansdocstoolkitswechatoverview><span>简介</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-hansdocstoolkitswechatget-started-li>
 <a href=/zh-hans/docs/toolkits/wechat/get-started/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zh-hansdocstoolkitswechatget-started><span>开始使用</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-hansdocstoolkitswechatlogin-li>
-<a href=/zh-hans/docs/toolkits/wechat/login/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zh-hansdocstoolkitswechatlogin><span>登录</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-zh-hansdocstoolkitswechatlogin-li>
+<a href=/zh-hans/docs/toolkits/wechat/login/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-zh-hansdocstoolkitswechatlogin><span>登录及标识</span></a>
+<ul class="ul-4 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-hansdocstoolkitswechatloginlogin-li>
+<a href=/zh-hans/docs/toolkits/wechat/login/login/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zh-hansdocstoolkitswechatloginlogin><span>登录</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-hansdocstoolkitswechatloginuser-info-li>
+<a href=/zh-hans/docs/toolkits/wechat/login/user-info/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zh-hansdocstoolkitswechatloginuser-info><span>用户信息</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-zh-hansdocstoolkitswechatlogincustom-li>
+<a href=/zh-hans/docs/toolkits/wechat/login/custom/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-zh-hansdocstoolkitswechatlogincustom><span>自定义</span></a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -116,15 +125,6 @@
 <a href=https://github.com/realZhangChi/Maui.Toolkit/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
 <a id=print href=https://docs.mauitoolkit.com/zh-hans/docs/toolkits/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
-<div class=td-toc><nav id=TableOfContents>
-<ul>
-<li><a href=#maui>MAUI</a></li>
-<li><a href=#mauitoolkit>Maui.Toolkit</a></li>
-<li><a href=#最佳实践>最佳实践</a></li>
-<li><a href=#易于扩展>易于扩展</a></li>
-<li><a href=#where-should-i-go-next>Where should I go next?</a></li>
-</ul>
-</nav></div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
@@ -139,32 +139,17 @@
 </nav>
 <div class=td-content>
 <h1>工具包</h1>
-<div class=lead>Maui开发工具包.</div>
+<div class=lead>Maui.Toolkit 集成了常用的第三方功能，开箱即用，提升你的开发效率。</div>
 <header class=article-meta>
-<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 minute read</p>
+<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 0 minute read</p>
 </header>
-<h2 id=maui>MAUI</h2>
-<p>.NET MAUI(.NET Multi-platform App UI) 是 .NET跨平台应用程序开发UI框架，是一个用于构建跨移动、平板电脑和桌面的本机设备应用程序的框架。<a href=https://github.com/dotnet/maui>https://github.com/dotnet/maui</a></p>
-<h2 id=mauitoolkit>Maui.Toolkit</h2>
-<p><a href=https://github.com/realZhangChi/Maui.Toolkit>Maui.Toolkit</a>是 <a href=https://github.com/dotnet/maui>.NET MAUI(.NET Multi-platform App UI)</a>的开发工具包，提供了跨平台开发常用的工具，对第三方SDK进行了封装并预先开发了通用的功能，旨在使基于 .NET MAUI 的跨平台开发更轻松。</p>
-<h2 id=最佳实践>最佳实践</h2>
-<p>Maui.Toolkit 遵循最佳实践进行开发，提供<strong>SOLID</strong>开发体验。</p>
-<h2 id=易于扩展>易于扩展</h2>
-<p>Maui.Toolkit 依赖于 .NET 框架的依赖注入系统，可将任一服务替换为自定义的实现。</p>
-<p>Maui.Toolkit通过为第三方SDK创建原生绑定类库，实现了以原生方式来为MAUI应用程序集成第三方功能。</p>
-<h2 id=where-should-i-go-next>Where should I go next?</h2>
-<p>Give your users next steps from the Overview. For example:</p>
-<ul>
-<li><a href=/docs/getting-started/>Getting Started</a>: Get started with $project</li>
-<li><a href=/docs/examples/>Examples</a>: Check out some example code!</li>
-</ul>
 <div class=section-index>
 <hr class=panel-line>
 <div class=entry>
 <h5>
-<a href=/zh-hans/docs/toolkits/wechat/>微信 Maui.Toolkit.WeChat</a>
+<a href=/zh-hans/docs/toolkits/wechat/>微信</a>
 </h5>
-<p>Maui.Toolkit.WeChat提供了微信开放功能的集成支持，包括登录、支付、分享等。</p>
+<p>Maui.Toolkit.WeChat 集成了微信开放功能，包括登录、支付、分享等。</p>
 </div>
 </div>
 <style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style>
@@ -184,8 +169,8 @@ Sorry to hear that. Please <a href=https://github.com/USERNAME/REPOSITORY/issues
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
-2021.10.19
-: <a href=https://github.com/realZhangChi/Maui.Toolkit.Docs/commit/ab6087c06441df8d3a32d26a5495adc072d5d4d3>:memo: update readme (ab6087c)</a>
+2021.10.21
+: <a href=https://github.com/realZhangChi/Maui.Toolkit.Docs/commit/eab8fbf452d3466c22046f8c448bba54a160d880>:memo: wechat (eab8fbf)</a>
 </div>
 </div>
 </main>

@@ -15,19 +15,19 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>微信 Maui.Toolkit.WeChat | Maui.Toolkit</title>
-<meta name=description content="Maui.Toolkit.WeChat提供了微信开放功能的集成支持，包括登录、支付、分享等。
+<title>微信 | Maui.Toolkit</title>
+<meta name=description content="Maui.Toolkit.WeChat 集成了微信开放功能，包括登录、支付、分享等。
 ">
-<meta property="og:title" content="微信 Maui.Toolkit.WeChat">
-<meta property="og:description" content="Maui.Toolkit.WeChat提供了微信开放功能的集成支持，包括登录、支付、分享等。
+<meta property="og:title" content="微信">
+<meta property="og:description" content="Maui.Toolkit.WeChat 集成了微信开放功能，包括登录、支付、分享等。
 ">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/"><meta property="og:site_name" content="Maui.Toolkit">
-<meta itemprop=name content="微信 Maui.Toolkit.WeChat">
-<meta itemprop=description content="Maui.Toolkit.WeChat提供了微信开放功能的集成支持，包括登录、支付、分享等。
+<meta itemprop=name content="微信">
+<meta itemprop=description content="Maui.Toolkit.WeChat 集成了微信开放功能，包括登录、支付、分享等。
 "><meta name=twitter:card content="summary">
-<meta name=twitter:title content="微信 Maui.Toolkit.WeChat">
-<meta name=twitter:description content="Maui.Toolkit.WeChat提供了微信开放功能的集成支持，包括登录、支付、分享等。
+<meta name=twitter:title content="微信">
+<meta name=twitter:description content="Maui.Toolkit.WeChat 集成了微信开放功能，包括登录、支付、分享等。
 ">
 <link rel=preload href=/scss/main.min.c1faedf8ffad73572d0e1e415dbba2f328cdbe3d77c6377df252c64584f4a222.css as=style>
 <link href=/scss/main.min.c1faedf8ffad73572d0e1e415dbba2f328cdbe3d77c6377df252c64584f4a222.css rel=stylesheet integrity>
@@ -78,28 +78,38 @@ This the multi-page printable view of this section.
 <a href=/zh-hans/docs/toolkits/wechat/>Return to the regular view of this page</a>.
 </p>
 </div>
-<h1 class=title>微信 Maui.Toolkit.WeChat</h1>
-<div class=lead>Maui.Toolkit.WeChat提供了微信开放功能的集成支持，包括登录、支付、分享等。</div>
+<h1 class=title>微信</h1>
+<div class=lead>Maui.Toolkit.WeChat 集成了微信开放功能，包括登录、支付、分享等。</div>
 <ul>
 <li>1: <a href=#pg-19f41148165c29066e483e20fa0e2689>简介</a></li>
 <li>2: <a href=#pg-307641a19db251774d5bab44800379b8>开始使用</a></li>
-<li>3: <a href=#pg-fea90f3f5f437f0dfc542d85736d8ace>登录</a></li>
+<li>3: <a href=#pg-6d03f0adf75bd383cbddef2a3695add0>登录及标识</a></li>
+<ul>
+<li>3.1: <a href=#pg-cbbda48bd01efd9b940617f561ff8570>登录</a></li>
+<li>3.2: <a href=#pg-3524c64b1cf85d5f8692fdf52f7a3cca>用户信息</a></li>
+<li>3.3: <a href=#pg-783af5d5018fcfa10d5cf132abd8716b>自定义</a></li>
+</ul>
 </ul>
 <div class=content>
 </div>
 </div>
 <div class=td-content>
 <h1 id=pg-19f41148165c29066e483e20fa0e2689>1 - 简介</h1>
-<div class=lead>Maui.Toolkit.WeChat 将微信官方提供的SDK进行了绑定类库转换，并基于转换后的类库，实现了微信开放平台的功能，使其开箱即用。</div>
+<div class=lead>Maui.Toolkit.WeChat 是一个开箱即用的微信工具包，集成了微信开放平台的功能</div>
 <div class="pageinfo pageinfo-primary">
-<p>我们的文档将介绍如何通过 Maui.Toolkit.WeChat 来使用微信开放平台功能。微信开放平台的详细信息及流程原理等参见<a href=https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html target=_blank>微信开放平台官方文档</a>。</p>
+<p>此文档将介绍如何通过 Maui.Toolkit.WeChat 来使用微信开放平台功能。微信开放平台的详细资料及流程原理等参见<a href=https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html target=_blank>微信开放平台官方文档</a>。</p>
 </div>
-<p>我们将微信开放平台的功能抽象成为一系列接口，并为不同的平台提供了默认的实现。开发人员只需调用我们定义的接口即可使用微信开放平台的功能，无需针对不同平台进行特殊处理。</p>
-<p>微信开放平台支持移动应用和网页应用的对接。在Maui.Toolkit.WeChat中，对于Android和iOS等移动端，默认的功能实现是遵循了移动应用的方案；对于Windows及Mac等桌面端，默认的功能实现是遵循了网页应用的方案。</p>
+<p>Maui.Toolkit.WeChat 为微信官方的SDK创建了绑定类库，以原生的方式集成了微信的功能。</p>
+<p>Maui.Toolkit.WeChat 将微信开放平台的功能抽象成为接口，并为不同的平台提供了默认的实现，只需调用Maui.Toolkit.WeChat 定义的接口即可使用微信开放平台的功能，使你无需处理繁琐的特定平台的操作。</p>
+<p>微信开放平台支持移动应用和网页应用的对接。在 Maui.Toolkit.WeChat 中，对于Android和iOS等移动端，将采用移动应用的方式；对于Windows及Mac等桌面端，将采用网页应用的方式。</p>
+<h2 id=下一步>下一步</h2>
+<ul>
+<li><a href=/docs/toolkits/wechat/get-started/>开始使用</a>：轻松配置并开始使用 Maui.Toolkit.WeChat</li>
+</ul>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-307641a19db251774d5bab44800379b8>2 - 开始使用</h1>
-<div class=lead>轻松配置您的项目使用开箱即用的 Maui.Toolkit.WeChat 工具包来集成微信开放平台功能。</div>
+<div class=lead>轻松配置并开始使用 Maui.Toolkit.WeChat</div>
 <h2 id=前提条件>前提条件</h2>
 <p>已经通过<a href="https://open.weixin.qq.com/cgi-bin/index?t=home/index&lang=zh_CN" target=_blank>微信开放平台</a>创建移动应用及网页应用，并获取他们的<strong>AppId</strong>和<strong>AppSecret</strong>。</p>
 <h2 id=引用>引用</h2>
@@ -140,7 +150,7 @@ This the multi-page printable view of this section.
         <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>builder</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Build</span><span style=color:#000;font-weight:700>();</span>
     <span style=color:#000;font-weight:700>}</span>
 <span style=color:#000;font-weight:700>}</span>
-</code></pre></div><p>为使您的应用正常与微信进行交互，还需要针对移动平台进行一些特殊配置：</p>
+</code></pre></div><p>为使您的应用正常与微信进行交互，需针对移动平台进行配置：</p>
 <ul class="nav nav-tabs" id=tabs-0 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-0-android-tab data-toggle=tab href=#tabs-0-android role=tab aria-controls=tabs-0-android aria-selected=true>
 Android
 </a>
@@ -151,25 +161,59 @@ iOS
 <div class=tab-content id=tabs-0-content>
 <div class="tab-pane fade show active" id=tabs-0-android role=tabpanel aria-labelled-by=tabs-0-android-tab>
 <br><ol>
-<li>在你的Maui项目的<code>/Platforms/Android/</code>目录下新建文件夹，命名为<code>WeChatApi</code></li>
-<li>在<code>WeChatApi</code>目录下新建类文件<code>WeChatEntryActivity.cs</code></li>
-<li>更改<code>WeChatEntryActivity.cs</code>的代码如下：</li>
-</ol>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#c4a000>
-</span><span style=color:#c4a000>[Activity(Name = &#34;Maui.Toolkit.Sample.WeChatApi.WeChatEntryActivity&#34;, Exported = true, TaskAffinity = &#34;Maui.Toolkit.Sample&#34;, LaunchMode = LaunchMode.SingleTask)]</span>
+<li>
+<p>在你的Maui项目的<code>/Platforms/Android/</code>目录下新建文件夹，命名为<code>WeChatApi</code></p>
+</li>
+<li>
+<p>在<code>WeChatApi</code>目录下新建类文件<code>WeChatEntryActivity.cs</code></p>
+</li>
+<li>
+<p>更改<code>WeChatEntryActivity.cs</code>的代码如下：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#c4a000>[Activity(
+</span><span style=color:#c4a000>    Name = &#34;Maui.Toolkit.Sample.WeChatApi.WeChatEntryActivity&#34;,
+</span><span style=color:#c4a000>    Exported = true,
+</span><span style=color:#c4a000>    TaskAffinity = &#34;Maui.Toolkit.Sample&#34;,
+</span><span style=color:#c4a000>    LaunchMode = LaunchMode.SingleTask)]</span>
 <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>WeChatEntryActivity</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#000>WeChat</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Platforms</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Android</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>WeChatApi</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>WeChatEntryActivity</span>
 <span style=color:#000;font-weight:700>{</span>
 <span style=color:#000;font-weight:700>}</span>
-
-</code></pre></div></div>
+</code></pre></div></li>
+</ol>
+</div>
 <div class="tab-pane fade" id=tabs-0-ios role=tabpanel aria-labelled-by=tabs-0-ios-tab>
 <br><p><em>TODO</em></p>
 </div>
 </div>
+<h2 id=下一步>下一步</h2>
+<p>以上就是使用Maui.Toolkit.WeChat所需的全部配置，注入服务并开始使用吧！</p>
+<ul>
+<li><a href=/docs/toolkits/wechat/login/>登录</a>: 通过微信登录您的应用</li>
+</ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-fea90f3f5f437f0dfc542d85736d8ace>3 - 登录</h1>
-<div class=lead>Maui.Toolkit.WeChat 实现了微信登录的功能，只需在您的项目中注入并调用我们的接口即可。</div>
+<h1 id=pg-6d03f0adf75bd383cbddef2a3695add0>3 - 登录及标识</h1>
+<div class=lead>通过微信登录你的应用，获取用户在微信中的身份标识。</div>
+<div class="pageinfo pageinfo-primary">
+<p>此文档将介绍如何使用 Maui.Toolkit.WeChat 来调用微信登录等功能。微信登录功能的详细文档参见<a href=https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html target=_blank>微信开放文档</a>。</p>
+</div>
+</div>
+<div class=td-content>
+<h1 id=pg-cbbda48bd01efd9b940617f561ff8570>3.1 - 登录</h1>
+<div class=lead>通过微信登录你的应用。</div>
+<p>在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。</p>
+<h2 id=开始使用>开始使用</h2>
+<p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Maui.Toolkit.WeChat.Services.Identity</code>名称空间。</p>
+<p>注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>方法，即可唤起微信登录。</p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-3524c64b1cf85d5f8692fdf52f7a3cca>3.2 - 用户信息</h1>
+<div class=lead>获取微信中的用户信息。</div>
+<p>TODO&mldr;</p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-783af5d5018fcfa10d5cf132abd8716b>3.3 - 自定义</h1>
+<div class=lead>将一个或多个服务替换为自定义实现。</div>
+<p>TODO&mldr;</p>
 </div>
 </main>
 </div>

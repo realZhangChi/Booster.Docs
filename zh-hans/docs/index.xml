@@ -1,9 +1,19 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Maui.Toolkit – 文档</title><link>https://docs.mauitoolkit.com/zh-hans/docs/</link><description>Recent content in 文档 on Maui.Toolkit</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.mauitoolkit.com/zh-hans/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 简介</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/overview/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/overview/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Maui.Toolkit – 文档</title><link>https://docs.mauitoolkit.com/zh-hans/docs/</link><description>Recent content in 文档 on Maui.Toolkit</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.mauitoolkit.com/zh-hans/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 登录</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/login/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/login/</guid><description>
+&lt;p>在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。&lt;/p>
+&lt;h2 id="开始使用">开始使用&lt;/h2>
+&lt;p>Maui.Toolkit.WeChat 在&lt;code>IAuthorizationService&lt;/code>接口中定义了微信登录，它位于&lt;code>Maui.Toolkit.WeChat.Services.Identity&lt;/code>名称空间。&lt;/p>
+&lt;p>注入接口&lt;code>IAuthorizationService&lt;/code>并调用&lt;code>AuthorizeAsync()&lt;/code>方法，即可唤起微信登录。&lt;/p></description></item><item><title>Docs: 简介</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/overview/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/overview/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>我们的文档将介绍如何通过 Maui.Toolkit.WeChat 来使用微信开放平台功能。微信开放平台的详细信息及流程原理等参见&lt;a href='https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html' target='_blank'>微信开放平台官方文档&lt;/a>。&lt;/p>
+&lt;p>此文档将介绍如何通过 Maui.Toolkit.WeChat 来使用微信开放平台功能。微信开放平台的详细资料及流程原理等参见&lt;a href='https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html' target='_blank'>微信开放平台官方文档&lt;/a>。&lt;/p>
 &lt;/div>
-&lt;p>我们将微信开放平台的功能抽象成为一系列接口，并为不同的平台提供了默认的实现。开发人员只需调用我们定义的接口即可使用微信开放平台的功能，无需针对不同平台进行特殊处理。&lt;/p>
-&lt;p>微信开放平台支持移动应用和网页应用的对接。在Maui.Toolkit.WeChat中，对于Android和iOS等移动端，默认的功能实现是遵循了移动应用的方案；对于Windows及Mac等桌面端，默认的功能实现是遵循了网页应用的方案。&lt;/p></description></item><item><title>Docs: 开始使用</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/</guid><description>
+&lt;p>Maui.Toolkit.WeChat 为微信官方的SDK创建了绑定类库，以原生的方式集成了微信的功能。&lt;/p>
+&lt;p>Maui.Toolkit.WeChat 将微信开放平台的功能抽象成为接口，并为不同的平台提供了默认的实现，只需调用Maui.Toolkit.WeChat 定义的接口即可使用微信开放平台的功能，使你无需处理繁琐的特定平台的操作。&lt;/p>
+&lt;p>微信开放平台支持移动应用和网页应用的对接。在 Maui.Toolkit.WeChat 中，对于Android和iOS等移动端，将采用移动应用的方式；对于Windows及Mac等桌面端，将采用网页应用的方式。&lt;/p>
+&lt;h2 id="下一步">下一步&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.mauitoolkit.com/docs/toolkits/wechat/get-started/">开始使用&lt;/a>：轻松配置并开始使用 Maui.Toolkit.WeChat&lt;/li>
+&lt;/ul></description></item><item><title>Docs: 用户信息</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/</guid><description>
+&lt;p>TODO&amp;hellip;&lt;/p></description></item><item><title>Docs: 开始使用</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/</guid><description>
 &lt;h2 id="前提条件">前提条件&lt;/h2>
 &lt;p>已经通过&lt;a href="https://open.weixin.qq.com/cgi-bin/index?t=home/index&amp;lang=zh_CN" target="_blank">微信开放平台&lt;/a>创建移动应用及网页应用，并获取他们的&lt;strong>AppId&lt;/strong>和&lt;strong>AppSecret&lt;/strong>。&lt;/p>
 &lt;h2 id="引用">引用&lt;/h2>
@@ -38,7 +48,7 @@
 &lt;span style="color:#204a87;font-weight:bold">return&lt;/span> &lt;span style="color:#000">builder&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Build&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
 &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>为使您的应用正常与微信进行交互，还需要针对移动平台进行一些特殊配置：&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>为使您的应用正常与微信进行交互，需针对移动平台进行配置：&lt;/p>
 &lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">&lt;a class="nav-link active"
 id="tabs-0-android-tab" data-toggle="tab" href="#tabs-0-android" role="tab"
 aria-controls="tabs-0-android" aria-selected="true">
@@ -53,17 +63,32 @@ iOS
 &lt;div class="tab-content" id="tabs-0-content">
 &lt;div class="tab-pane fade show active" id="tabs-0-android" role="tabpanel" aria-labelled-by="tabs-0-android-tab">
 &lt;br />&lt;ol>
-&lt;li>在你的Maui项目的&lt;code>/Platforms/Android/&lt;/code>目录下新建文件夹，命名为&lt;code>WeChatApi&lt;/code>&lt;/li>
-&lt;li>在&lt;code>WeChatApi&lt;/code>目录下新建类文件&lt;code>WeChatEntryActivity.cs&lt;/code>&lt;/li>
-&lt;li>更改&lt;code>WeChatEntryActivity.cs&lt;/code>的代码如下：&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-C#" data-lang="C#">&lt;span style="color:#c4a000">
-&lt;/span>&lt;span style="color:#c4a000">[Activity(Name = &amp;#34;Maui.Toolkit.Sample.WeChatApi.WeChatEntryActivity&amp;#34;, Exported = true, TaskAffinity = &amp;#34;Maui.Toolkit.Sample&amp;#34;, LaunchMode = LaunchMode.SingleTask)]&lt;/span>
+&lt;li>
+&lt;p>在你的Maui项目的&lt;code>/Platforms/Android/&lt;/code>目录下新建文件夹，命名为&lt;code>WeChatApi&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在&lt;code>WeChatApi&lt;/code>目录下新建类文件&lt;code>WeChatEntryActivity.cs&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>更改&lt;code>WeChatEntryActivity.cs&lt;/code>的代码如下：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-C#" data-lang="C#">&lt;span style="color:#c4a000">[Activity(
+&lt;/span>&lt;span style="color:#c4a000"> Name = &amp;#34;Maui.Toolkit.Sample.WeChatApi.WeChatEntryActivity&amp;#34;,
+&lt;/span>&lt;span style="color:#c4a000"> Exported = true,
+&lt;/span>&lt;span style="color:#c4a000"> TaskAffinity = &amp;#34;Maui.Toolkit.Sample&amp;#34;,
+&lt;/span>&lt;span style="color:#c4a000"> LaunchMode = LaunchMode.SingleTask)]&lt;/span>
 &lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">WeChatEntryActivity&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">WeChat&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Platforms&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">Android&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">WeChatApi&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">WeChatEntryActivity&lt;/span>
 &lt;span style="color:#000;font-weight:bold">{&lt;/span>
 &lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;/div>
 &lt;div class="tab-pane fade" id="tabs-0-ios" role="tabpanel" aria-labelled-by="tabs-0-ios-tab">
 &lt;br />&lt;p>&lt;em>TODO&lt;/em>&lt;/p>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: 登录</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/</guid><description/></item></channel></rss>
+&lt;/div>
+&lt;h2 id="下一步">下一步&lt;/h2>
+&lt;p>以上就是使用Maui.Toolkit.WeChat所需的全部配置，注入服务并开始使用吧！&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.mauitoolkit.com/docs/toolkits/wechat/login/">登录&lt;/a>: 通过微信登录您的应用&lt;/li>
+&lt;/ul></description></item><item><title>Docs: 自定义</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/custom/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/custom/</guid><description>
+&lt;p>TODO&amp;hellip;&lt;/p></description></item></channel></rss>
