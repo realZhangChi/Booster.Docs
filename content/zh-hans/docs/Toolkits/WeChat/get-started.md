@@ -4,7 +4,7 @@ linkTitle: "开始使用"
 date: 2021-10-14
 weight: 2
 description: >
-  轻松配置您的项目使用开箱即用的 Maui.Toolkit.WeChat 工具包来集成微信开放平台功能。
+  轻松配置并开始使用 Maui.Toolkit.WeChat
 ---
 
 ## 前提条件
@@ -56,7 +56,7 @@ public static class MauiProgram
 }
 ```
 
-为使您的应用正常与微信进行交互，还需要针对移动平台进行一些特殊配置：
+为使您的应用正常与微信进行交互，需针对移动平台进行配置：
 
 {{< tabs Android iOS>}}
 
@@ -66,14 +66,16 @@ public static class MauiProgram
 2. 在`WeChatApi`目录下新建类文件`WeChatEntryActivity.cs`
 3. 更改`WeChatEntryActivity.cs`的代码如下：
 
-``` C#
-
-[Activity(Name = "Maui.Toolkit.Sample.WeChatApi.WeChatEntryActivity", Exported = true, TaskAffinity = "Maui.Toolkit.Sample", LaunchMode = LaunchMode.SingleTask)]
-public class WeChatEntryActivity : WeChat.Platforms.Android.WeChatApi.WeChatEntryActivity
-{
-}
-
-```
+    ``` C#
+    [Activity(
+        Name = "Maui.Toolkit.Sample.WeChatApi.WeChatEntryActivity",
+        Exported = true,
+        TaskAffinity = "Maui.Toolkit.Sample",
+        LaunchMode = LaunchMode.SingleTask)]
+    public class WeChatEntryActivity : WeChat.Platforms.Android.WeChatApi.WeChatEntryActivity
+    {
+    }
+    ```
 
 {{% /codetab %}}
 
@@ -84,3 +86,9 @@ public class WeChatEntryActivity : WeChat.Platforms.Android.WeChatApi.WeChatEntr
 {{% /codetab %}}
 
 {{< /tabs >}}
+
+## 下一步
+
+以上就是使用Maui.Toolkit.WeChat所需的全部配置，注入服务并开始使用吧！
+
+* [登录](/docs/toolkits/wechat/login/): 通过微信登录您的应用

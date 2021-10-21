@@ -3,7 +3,7 @@ title: "简介"
 linkTitle: "简介"
 weight: 1
 description: >
-  什么是**Maui.Toolkit**.
+  什么是**Maui.Toolkit**
 ---
 
 ## MAUI
@@ -12,17 +12,11 @@ description: >
 
 ## Maui.Toolkit
 
-[Maui.Toolkit](https://github.com/realZhangChi/Maui.Toolkit)是 [.NET MAUI(.NET Multi-platform App UI)](https://github.com/dotnet/maui)的开发工具包，提供了跨平台开发常用的工具，对第三方SDK进行了封装并预先开发了通用的功能，旨在使基于 .NET MAUI 的跨平台开发更轻松。
-
-## 最佳实践
-
-Maui.Toolkit 遵循最佳实践进行开发，提供**SOLID**开发体验。
+[Maui.Toolkit](https://github.com/realZhangChi/Maui.Toolkit)是 [.NET MAUI(.NET Multi-platform App UI)](https://github.com/dotnet/maui)的开发工具包，提供了跨平台开发常用的工具。Maui.Toolkit为第三方SDK创建原生绑定类库，以原生方式集成第三方功能，并基于此进行了封装，使基于 .NET MAUI 的跨平台开发更轻松。
 
 ## 易于扩展
 
-Maui.Toolkit 依赖于 .NET 框架的依赖注入系统，可将任一服务替换为自定义的实现。
-
-Maui.Toolkit通过为第三方SDK创建原生绑定类库，实现了以原生方式来为MAUI应用程序集成第三方功能。
+Maui.Toolkit 充分利用于 .NET 框架的依赖注入系统，可将任一服务替换为自定义的实现。
 
 <!-- ## Where should I go next?
 

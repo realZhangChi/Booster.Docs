@@ -4,13 +4,19 @@ linkTitle: "简介"
 date: 2021-10-14
 weight: 1
 description: >
-  Maui.Toolkit.WeChat 将微信官方提供的SDK进行了绑定类库转换，并基于转换后的类库，实现了微信开放平台的功能，使其开箱即用。
+  Maui.Toolkit.WeChat 是一个开箱即用的微信工具包，集成了微信开放平台的功能
 ---
 
 {{% pageinfo %}}
-我们的文档将介绍如何通过 Maui.Toolkit.WeChat 来使用微信开放平台功能。微信开放平台的详细信息及流程原理等参见<a href='https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html' target='_blank'>微信开放平台官方文档</a>。
+此文档将介绍如何通过 Maui.Toolkit.WeChat 来使用微信开放平台功能。微信开放平台的详细资料及流程原理等参见<a href='https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html' target='_blank'>微信开放平台官方文档</a>。
 {{% /pageinfo %}}
 
-我们将微信开放平台的功能抽象成为一系列接口，并为不同的平台提供了默认的实现。开发人员只需调用我们定义的接口即可使用微信开放平台的功能，无需针对不同平台进行特殊处理。
+Maui.Toolkit.WeChat 为微信官方的SDK创建了绑定类库，以原生的方式集成了微信的功能。
 
-微信开放平台支持移动应用和网页应用的对接。在Maui.Toolkit.WeChat中，对于Android和iOS等移动端，默认的功能实现是遵循了移动应用的方案；对于Windows及Mac等桌面端，默认的功能实现是遵循了网页应用的方案。
+Maui.Toolkit.WeChat 将微信开放平台的功能抽象成为接口，并为不同的平台提供了默认的实现，只需调用Maui.Toolkit.WeChat 定义的接口即可使用微信开放平台的功能，使你无需处理繁琐的特定平台的操作。
+
+微信开放平台支持移动应用和网页应用的对接。在 Maui.Toolkit.WeChat 中，对于Android和iOS等移动端，将采用移动应用的方式；对于Windows及Mac等桌面端，将采用网页应用的方式。
+
+## 下一步
+
+* [开始使用](/docs/toolkits/wechat/get-started/)：轻松配置并开始使用 Maui.Toolkit.WeChat
