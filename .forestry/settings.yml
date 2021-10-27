@@ -13,7 +13,7 @@ sections:
   label: Docs
 - type: directory
   path: content/en/docs
-  label: Docs
+  label: Docs en
   create: all
   match: "**/*"
 - type: directory
