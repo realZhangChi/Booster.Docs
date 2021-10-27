@@ -17,8 +17,8 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: content/zh-cn/docs
-  label: Docs-zh
+  path: content/zh-hans/docs
+  label: Docs zh-hans
   create: all
   match: "**/*"
 upload_dir: static/uploads
