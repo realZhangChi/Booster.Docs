@@ -20,10 +20,10 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2021-10-28T12:19:52+00:00">
-<meta property="article:modified_time" content="2021-10-28T13:25:18+00:00"><meta property="og:site_name" content="Maui.Toolkit">
+<meta property="article:modified_time" content="2021-10-28T13:28:16+00:00"><meta property="og:site_name" content="Maui.Toolkit">
 <meta itemprop=name content="登录">
 <meta itemprop=description content="通过微信登录并获取用户信息"><meta itemprop=datePublished content="2021-10-28T12:19:52+00:00">
-<meta itemprop=dateModified content="2021-10-28T13:25:18+00:00">
+<meta itemprop=dateModified content="2021-10-28T13:28:16+00:00">
 <meta itemprop=wordCount content="103">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="登录">
@@ -168,7 +168,7 @@
     }
 }
 </code></pre>
-<p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit会自动处理微信回调，根据授权码获取<code>Token</code>，获取用户在微信中的个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。</p>
+<p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取<code>Token</code>和个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。</p>
 <h2 id=token>Token</h2>
 <p>Maui.Toolkit中定义并实现了ITokenStore接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用<code>GetOrNullAsync</code>方法，获取到用户信息<code>UserInfo</code>实例。</p>
 <pre><code>public partial class MainPage : ContentPage
@@ -221,7 +221,7 @@ Sorry to hear that. Please <a href=https://github.com/USERNAME/REPOSITORY/issues
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
 2021.10.28
-: <a href=https://github.com/realZhangChi/Maui.Toolkit.Docs/commit/18339d8a738024a626db41f68224e14b195bdf0e>Update from Forestry.io ZhangChi updated content/zh-hans/docs/Toolkits/WeChat/login.md (18339d8)</a>
+: <a href=https://github.com/realZhangChi/Maui.Toolkit.Docs/commit/db9da935f7b5e7100eea0395b05041e2a3b3bf1e>Update from Forestry.io ZhangChi updated content/zh-hans/docs/Toolkits/WeChat/login.md (db9da93)</a>
 </div>
 </div>
 </main>

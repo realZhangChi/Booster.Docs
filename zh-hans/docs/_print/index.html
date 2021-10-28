@@ -235,7 +235,7 @@ iOS
     }
 }
 </code></pre>
-<p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit会自动处理微信回调，根据授权码获取<code>Token</code>，获取用户在微信中的个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。</p>
+<p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取<code>Token</code>和个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。</p>
 <h2 id=token>Token</h2>
 <p>Maui.Toolkit中定义并实现了ITokenStore接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用<code>GetOrNullAsync</code>方法，获取到用户信息<code>UserInfo</code>实例。</p>
 <pre><code>public partial class MainPage : ContentPage
