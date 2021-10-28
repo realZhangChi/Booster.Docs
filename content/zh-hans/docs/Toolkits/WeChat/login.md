@@ -19,10 +19,29 @@ weight = "3"
 
 Maui.Toolkit.WeChat 在`IAuthorizationService`接口中定义了微信登录，它位于`Maui.Toolkit.WeChat.Services.Identity`名称空间。注入接口`IAuthorizationService`并调用`AuthorizeAsync()`，即可唤起微信登录。
 
-用户在微信中授权后，将携带授权码回调，Maui.Toolkit.WeChat将会自动处理回调，根据授权码获取Token，获取用户在微信中的个人信息UserInfo。Token和UserInfo都将存储在设备安全存储空间中。
+    public partial class MainPage : ContentPage
+    {
+        private readonly IAuthorizationService _authorizationService;
+    
+        public MainPage(IAuthorizationService authorizationService)
+        {
+            _authorizationService = authorizationService;
+        }
+    
+        private async void OnAuthorizeClicked(object sender, EventArgs e)
+        {
+            await _authorizationService.AuthorizeAsync();
+        }
+    }
+
+用户在微信中授权后，将携带授权码回调，Maui.Toolkit.WeChat将会自动处理回调，根据授权码获取Token，获取用户在微信中的个人信息`UserInfo`。`Token`和`UserInfo`都将存储在设备安全存储空间中。
 
 ## Token
 
 ## 用户信息
 
-Maui.Toolkit.WeChat中定义并实现了了IUserInfoStore接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用GetOrNullAsync方法，获取到用户信息UserInfo实例。
+Maui.Toolkit中定义并实现了`IUserInfoStore`接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用`GetOrNullAsync`方法，获取到用户信息`UserInfo`实例。
+
+## 自定义
+
+Maui.Toolkit.WeChat已默认实现了微信登录的相关功能，一般情况下，只需注入并调用接口即可。当需要更复杂的处理的时候，可以轻松对服务进行扩展或替换为自定义实现。
