@@ -5,6 +5,8 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: text
   name: linkTitle
   label: linkTitle
@@ -15,3 +17,10 @@ fields:
 - type: text
   name: description
   label: description
+- name: File_Name
+  type: text
+  config:
+    required: true
+  label: file name
+  hidden: true
+  default: _index
