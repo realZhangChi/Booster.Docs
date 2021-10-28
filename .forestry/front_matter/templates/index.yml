@@ -2,13 +2,6 @@
 label: index
 hide_body: true
 fields:
-- type: text
-  name: file
-  label: title
-  config:
-    required: true
-  hidden: true
-  default: _index
 - name: title
   type: text
   config:
