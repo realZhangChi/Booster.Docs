@@ -219,7 +219,7 @@ iOS
 </div>
 <h2 id=登录>登录</h2>
 <p>在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。</p>
-<p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Maui.Toolkit.WeChat.Services.Identity</code>名称空间。注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>，即可唤起微信登录。</p>
+<p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Maui.Toolkit.WeChat.Services.Identity</code>名称空间。注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>来调用微信登录。</p>
 <pre><code>public partial class MainPage : ContentPage
 {
     private readonly IAuthorizationService _authorizationService;
@@ -235,9 +235,9 @@ iOS
     }
 }
 </code></pre>
-<p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取<code>Token</code>和个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。</p>
+<p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取<code>Token</code>和个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。使用Maui.Toolkit进行登录后可获取<code>Token</code>和用户信息<code>UserInfo</code>。</p>
 <h2 id=token>Token</h2>
-<p>Maui.Toolkit中定义并实现了ITokenStore接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用<code>GetOrNullAsync</code>方法，获取到用户信息<code>UserInfo</code>实例。</p>
+<p>注入<code>ITokenStore</code>接口并调用<code>GetOrNullAsync</code>方法来获取<code>Token</code>。</p>
 <pre><code>public partial class MainPage : ContentPage
 {
     private readonly ITokenStore _tokenStore;
@@ -253,7 +253,7 @@ iOS
 }
 </code></pre>
 <h2 id=用户信息>用户信息</h2>
-<p>Maui.Toolkit中定义并实现了<code>IUserInfoStore</code>接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用<code>GetOrNullAsync</code>方法，获取到用户信息<code>UserInfo</code>实例。</p>
+<p>注入<code>IUserInfoStore</code>接口并调用<code>GetOrNullAsync</code>方法来获取用户信息。</p>
 <pre><code>public partial class UserInfoPage : ContentPage
 {
     private readonly IUserInfoStore _userInfoStore;
