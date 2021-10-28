@@ -2,7 +2,9 @@
 &lt;p>在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。&lt;/p>
 &lt;h2 id="开始使用">开始使用&lt;/h2>
 &lt;p>Maui.Toolkit.WeChat 在&lt;code>IAuthorizationService&lt;/code>接口中定义了微信登录，它位于&lt;code>Maui.Toolkit.WeChat.Services.Identity&lt;/code>名称空间。&lt;/p>
-&lt;p>注入接口&lt;code>IAuthorizationService&lt;/code>并调用&lt;code>AuthorizeAsync()&lt;/code>方法，即可唤起微信登录。&lt;/p></description></item><item><title>Docs: 简介</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/overview/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/overview/</guid><description>
+&lt;p>注入接口&lt;code>IAuthorizationService&lt;/code>并调用&lt;code>AuthorizeAsync()&lt;/code>方法，即可唤起微信登录。&lt;/p>
+&lt;h2 id="回调">回调&lt;/h2>
+&lt;p>用户在微信中授权登录后，将携带授权码回调到Maui应用程序中。&lt;/p></description></item><item><title>Docs: 简介</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/overview/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/overview/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>此文档将介绍如何通过 Maui.Toolkit.WeChat 来使用微信开放平台功能。微信开放平台的详细资料及流程原理等参见&lt;a href='https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html' target='_blank'>微信开放平台官方文档&lt;/a>。&lt;/p>
 &lt;/div>
