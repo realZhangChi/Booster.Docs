@@ -1,0 +1,19 @@
+---
+label: Docs
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: linkTitle
+  label: linkTitle
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: weight
+  label: weight
+- type: text
+  name: description
+  label: description
