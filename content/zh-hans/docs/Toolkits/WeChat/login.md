@@ -16,7 +16,7 @@ weight = "3"
 
 在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。
 
-Maui.Toolkit.WeChat 在`IAuthorizationService`接口中定义了微信登录，它位于`Maui.Toolkit.WeChat.Services.Identity`名称空间。注入接口`IAuthorizationService`并调用`AuthorizeAsync()`，即可唤起微信登录。
+Maui.Toolkit.WeChat 在`IAuthorizationService`接口中定义了微信登录，它位于`Maui.Toolkit.WeChat.Services.Identity`名称空间。注入接口`IAuthorizationService`并调用`AuthorizeAsync()`来调用微信登录。
 
     public partial class MainPage : ContentPage
     {
@@ -33,11 +33,11 @@ Maui.Toolkit.WeChat 在`IAuthorizationService`接口中定义了微信登录，�
         }
     }
 
-用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取`Token`和个人信息`UserInfo`。`Token`和`UserInfo`都将存储在设备安全存储空间中。
+用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取`Token`和个人信息`UserInfo`。`Token`和`UserInfo`都将存储在设备安全存储空间中。使用Maui.Toolkit进行登录后可获取`Token`和用户信息`UserInfo`。
 
 ## Token
 
-Maui.Toolkit中定义并实现了ITokenStore接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用`GetOrNullAsync`方法，获取到用户信息`UserInfo`实例。
+注入`ITokenStore`接口并调用`GetOrNullAsync`方法来获取`Token`。
 
     public partial class MainPage : ContentPage
     {
@@ -55,7 +55,7 @@ Maui.Toolkit中定义并实现了ITokenStore接口。在使用Maui.Toolkit进行
 
 ## 用户信息
 
-Maui.Toolkit中定义并实现了`IUserInfoStore`接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用`GetOrNullAsync`方法，获取到用户信息`UserInfo`实例。
+注入`IUserInfoStore`接口并调用`GetOrNullAsync`方法来获取用户信息。
 
     public partial class UserInfoPage : ContentPage
     {
