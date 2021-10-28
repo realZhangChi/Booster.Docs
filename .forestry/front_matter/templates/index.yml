@@ -24,3 +24,5 @@ fields:
   label: file name
   hidden: true
   default: _index
+pages:
+- content/zh-hans/docs/Toolkits/WeChat/login/custom/扩展与自定义.md
