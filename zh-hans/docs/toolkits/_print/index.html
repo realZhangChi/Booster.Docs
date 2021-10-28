@@ -216,10 +216,39 @@ iOS
     }
 }
 </code></pre>
-<p>用户在微信中授权后，将携带授权码回调，Maui.Toolkit.WeChat将会自动处理回调，根据授权码获取Token，获取用户在微信中的个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。</p>
+<p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit会自动处理微信回调，根据授权码获取<code>Token</code>，获取用户在微信中的个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。</p>
 <h2 id=token>Token</h2>
+<p>Maui.Toolkit中定义并实现了ITokenStore接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用<code>GetOrNullAsync</code>方法，获取到用户信息<code>UserInfo</code>实例。</p>
+<pre><code>public partial class MainPage : ContentPage
+{
+    private readonly ITokenStore _tokenStore;
+    public MainPage(ITokenStore tokenStore)
+    {
+        _tokenStore = tokenStore;
+    }
+
+    public async Task&lt;Token&gt; GetToken()
+    {
+        return await _tokenStore.GetOrNullAsync();
+    }
+}
+</code></pre>
 <h2 id=用户信息>用户信息</h2>
 <p>Maui.Toolkit中定义并实现了<code>IUserInfoStore</code>接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用<code>GetOrNullAsync</code>方法，获取到用户信息<code>UserInfo</code>实例。</p>
+<pre><code>public partial class UserInfoPage : ContentPage
+{
+    private readonly IUserInfoStore _userInfoStore;
+    public UserInfoPage(IUserInfoStore userInfoStore)
+    {
+        _userInfoStore = userInfoStore;
+    }
+
+    public async Task&lt;UserInfo&gt; GetUserInfo()
+    {
+        return await _userInfoStore.GetOrNullAsync();
+    }
+}
+</code></pre>
 <h2 id=自定义>自定义</h2>
 <p>Maui.Toolkit.WeChat已默认实现了微信登录的相关功能，一般情况下，只需注入并调用接口即可。当需要更复杂的处理的时候，可以轻松对服务进行扩展或替换为自定义实现。</p>
 </div>
