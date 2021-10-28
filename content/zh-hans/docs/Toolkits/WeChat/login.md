@@ -70,7 +70,3 @@ Maui.Toolkit.WeChat 在`IAuthorizationService`接口中定义了微信登录，�
             return await _userInfoStore.GetOrNullAsync();
         }
     }
-
-## 自定义
-
-Maui.Toolkit.WeChat已默认实现了微信登录的相关功能，一般情况下，只需注入并调用接口即可。当需要更复杂的处理的时候，可以轻松对服务进行扩展或替换为自定义实现。
