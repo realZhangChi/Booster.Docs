@@ -19,7 +19,7 @@ await _userInfoStore.SetAsync(userInfo);
 &lt;p>在回调方法中，首先会根据微信的授权码去获取Token，记录Token的颁发时间后将其保存到&lt;code>ITokenStore&lt;/code>中。然后获取微信用户的个人信息，并保存到&lt;code>IUserInfoStore&lt;/code>中。&lt;/p>
 &lt;h2 id="下一步">&lt;strong>下一步&lt;/strong>&lt;/h2>
 &lt;ul>
-&lt;li>[用户信息](&lt;a href="https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/" title="https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/">docs/toolkits/wechat/login/user-info/&lt;/a>)：通过&lt;code>IUserInfoStore&lt;/code>获取用户信息&lt;/li>
+&lt;li>&lt;a href="docs/toolkits/wechat/login/user-info/">用户信息&lt;/a>：通过&lt;code>IUserInfoStore&lt;/code>获取用户信息&lt;/li>
 &lt;/ul></description></item><item><title>Docs: 用户信息</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/</guid><description>
 &lt;p>TODO&amp;hellip;&lt;/p></description></item><item><title>Docs: 自定义</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/custom/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/custom/</guid><description>
 &lt;p>TODO&amp;hellip;&lt;/p></description></item></channel></rss>
