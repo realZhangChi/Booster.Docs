@@ -8,6 +8,10 @@ description: '通过微信登录你的应用。
 '
 
 ---
+{{% pageinfo %}}
+_首先请阅读_[_开始使用_](https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/#配置)_章节确保完成与微信交互所需的配置。_
+{{% /pageinfo %}}
+
 在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。
 
 ## 开始使用
@@ -16,9 +20,9 @@ Maui.Toolkit.WeChat 在`IAuthorizationService`接口中定义了微信登录，�
 
 注入接口`IAuthorizationService`并调用`AuthorizeAsync()`方法，即可唤起微信登录。
 
-## 回调
+一般地，了解以上知识即可通过Maui.Toolkit.WeChat使用微信登录，Maui.Toolkit.WeChat将会自动处理登录回调并从微信获取用户信息。
 
-_首先请阅读_[_开始使用_](https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/#配置)_章节确保完成与微信交互所需的配置。_
+## 回调
 
 用户在微信中授权登录后，将携带授权码回调到Maui应用程序中。接收到回调请求后，将自动调用`IAuthorizationService`上的`AuthorizeCallbackAsync`方法来完成通过微信登录及后续步骤。
 
