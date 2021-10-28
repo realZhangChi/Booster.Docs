@@ -18,4 +18,6 @@ Maui.Toolkit.WeChat 在`IAuthorizationService`接口中定义了微信登录，�
 
 ## 回调
 
-用户在微信中授权登录后，将携带授权码回调到Maui应用程序中。
+_首先请阅读_[_开始使用_](https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/#配置)_章节确保完成与微信交互所需的配置。_
+
+用户在微信中授权登录后，将携带授权码回调到Maui应用程序中。接收到回调请求后，将调用`IAuthorizationService`上的`AuthorizationCallback`方法来完成通过微信登录及后续步骤。
