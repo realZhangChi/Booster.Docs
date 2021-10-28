@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Maui.Toolkit – 文档</title><link>https://docs.mauitoolkit.com/zh-hans/docs/</link><description>Recent content in 文档 on Maui.Toolkit</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.mauitoolkit.com/zh-hans/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 登录</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/login/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/login/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>&lt;em>首先请阅读&lt;/em>&lt;a href="https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/#%E9%85%8D%E7%BD%AE">&lt;em>开始使用&lt;/em>&lt;/a>&lt;em>章节确保完成与微信交互所需的配置。&lt;/em>&lt;/p>
+&lt;p>首先请阅读&lt;a href="https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/#%E9%85%8D%E7%BD%AE">开始使用&lt;/a>章节确保完成与微信交互所需的配置。&lt;/p>
 &lt;/div>
 &lt;p>在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。&lt;/p>
 &lt;h2 id="开始使用">开始使用&lt;/h2>
