@@ -9,7 +9,7 @@ description: '通过微信登录你的应用。
 
 ---
 {{% pageinfo %}}
-_首先请阅读_[_开始使用_](https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/#配置)_章节确保完成与微信交互所需的配置。_
+首先请阅读[开始使用](https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/#配置)章节确保完成与微信交互所需的配置。
 {{% /pageinfo %}}
 
 在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。
