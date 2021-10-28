@@ -39,4 +39,4 @@ _首先请阅读_[_开始使用_](https://docs.mauitoolkit.com/zh-hans/docs/tool
 
 ## **下一步**
 
-* \[用户信息\]([docs/toolkits/wechat/login/user-info/](https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/ "https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/"))：通过`IUserInfoStore`获取用户信息
+* [用户信息](docs/toolkits/wechat/login/user-info/)：通过`IUserInfoStore`获取用户信息
