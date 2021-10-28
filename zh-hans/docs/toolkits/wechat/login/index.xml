@@ -24,5 +24,11 @@ await _userInfoStore.SetAsync(userInfo);
 &lt;ul>
 &lt;li>&lt;a href="docs/toolkits/wechat/login/user-info/">用户信息&lt;/a>：通过&lt;code>IUserInfoStore&lt;/code>获取用户信息&lt;/li>
 &lt;/ul></description></item><item><title>Docs: 用户信息</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/user-info/</guid><description>
-&lt;p>TODO&amp;hellip;&lt;/p></description></item><item><title>Docs: 自定义</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/custom/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/custom/</guid><description>
+&lt;p>使用Maui.Toolkit.WeChat进行微信登录后，会自动获取并保存用户在微信中的个人信息。&lt;/p>
+&lt;h2 id="iuserinfostore">IUserInfoStore&lt;/h2>
+&lt;p>Maui.Toolkit.WeChat中定义并实现了了IUserInfoStore接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用GetOrNullAsync方法，获取到用户信息UserInfo实例。&lt;/p>
+&lt;h2 id="下一步">下一步&lt;/h2>
+&lt;ul>
+&lt;li>自定义IUserInfoStore：TODO&lt;/li>
+&lt;/ul></description></item><item><title>Docs: 自定义</title><link>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/custom/</link><pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/custom/</guid><description>
 &lt;p>TODO&amp;hellip;&lt;/p></description></item></channel></rss>
