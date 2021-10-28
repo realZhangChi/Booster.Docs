@@ -2,11 +2,20 @@
 label: index
 hide_body: true
 fields:
+- name: title
+  type: text
+  config:
+    required: true
+  hidden: false
+  default: ''
+  label: title
 - type: text
-  name: title
+  name: file
   label: title
   config:
     required: true
+  hidden: true
+  default: _index
 - type: text
   name: linkTitle
   label: linkTitle
@@ -17,12 +26,5 @@ fields:
 - type: text
   name: description
   label: description
-- name: File_Name
-  type: text
-  config:
-    required: true
-  label: file name
-  hidden: true
-  default: _index
 pages:
 - content/zh-hans/docs/Toolkits/WeChat/login/custom/扩展与自定义.md
