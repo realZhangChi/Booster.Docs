@@ -19,4 +19,4 @@ fields:
   name: description
   label: description
 pages:
-- content/zh-hans/docs/Toolkits/WeChat/login/扩展或自定义.md
+- content/zh-hans/docs/Toolkits/WeChat/login/custom.md
