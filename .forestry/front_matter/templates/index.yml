@@ -15,3 +15,5 @@ fields:
 - type: text
   name: description
   label: description
+pages:
+- content/zh-hans/docs/自定义.md
