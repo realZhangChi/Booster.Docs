@@ -33,7 +33,7 @@ Maui.Toolkit.WeChat 在`IAuthorizationService`接口中定义了微信登录，�
         }
     }
 
-用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit会自动处理微信回调，根据授权码获取`Token`，获取用户在微信中的个人信息`UserInfo`。`Token`和`UserInfo`都将存储在设备安全存储空间中。
+用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取`Token`和个人信息`UserInfo`。`Token`和`UserInfo`都将存储在设备安全存储空间中。
 
 ## Token
 
