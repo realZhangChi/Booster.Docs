@@ -20,4 +20,3 @@ fields:
   label: description
 pages:
 - content/zh-hans/docs/Toolkits/WeChat/login.md
-- content/zh-hans/docs/Toolkits/WeChat/login/custom.md
