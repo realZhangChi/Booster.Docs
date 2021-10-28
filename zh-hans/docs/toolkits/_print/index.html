@@ -215,22 +215,6 @@ iOS
 <p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Maui.Toolkit.WeChat.Services.Identity</code>名称空间。</p>
 <p>注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>方法，即可唤起微信登录。</p>
 <p>一般地，了解以上知识即可通过Maui.Toolkit.WeChat使用微信登录，Maui.Toolkit.WeChat将会自动处理登录回调并从微信获取用户信息。</p>
-<h2 id=回调>回调</h2>
-<p>用户在微信中授权登录后，将携带授权码回调到Maui应用程序中。接收到回调请求后，将自动调用<code>IAuthorizationService</code>上的<code>AuthorizeCallbackAsync</code>方法来完成通过微信登录及后续步骤。</p>
-<pre><code>public virtual async Task AuthorizeCallbackAsync(string appId, string appSecret, string code)
-    {
-    
-    // 一些前置卫语句...
-    
-        var token = await _weChatHttpClient.GetTokenAsync(appId, appSecret, code);
-        token.IssuedAt = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-        await _tokenStore.SetAsync(token);
-
-        var userInfo = await _weChatHttpClient.GetUserInfoAsync(token.AccessToken, token.OpenId);
-        await _userInfoStore.SetAsync(userInfo);
-    }
-</code></pre>
-<p>在回调方法中，首先会根据微信的授权码去获取Token，记录Token的颁发时间后将其保存到<code>ITokenStore</code>中。然后获取微信用户的个人信息，并保存到<code>IUserInfoStore</code>中。</p>
 <h2 id=下一步><strong>下一步</strong></h2>
 <ul>
 <li><a href=docs/toolkits/wechat/login/user-info/>用户信息</a>：通过<code>IUserInfoStore</code>获取用户信息</li>

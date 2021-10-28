@@ -22,12 +22,12 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/login/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2021-10-21T00:00:00+00:00">
-<meta property="article:modified_time" content="2021-10-28T09:31:07+00:00"><meta property="og:site_name" content="Maui.Toolkit">
+<meta property="article:modified_time" content="2021-10-28T09:35:43+00:00"><meta property="og:site_name" content="Maui.Toolkit">
 <meta itemprop=name content="登录">
 <meta itemprop=description content="通过微信登录你的应用。
 "><meta itemprop=datePublished content="2021-10-21T00:00:00+00:00">
-<meta itemprop=dateModified content="2021-10-28T09:31:07+00:00">
-<meta itemprop=wordCount content="46">
+<meta itemprop=dateModified content="2021-10-28T09:35:43+00:00">
+<meta itemprop=wordCount content="9">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="登录">
 <meta name=twitter:description content="通过微信登录你的应用。
@@ -128,13 +128,6 @@
 <a href=https://github.com/realZhangChi/Maui.Toolkit/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
 <a id=print href=https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/login/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
-<div class=td-toc><nav id=TableOfContents>
-<ul>
-<li><a href=#开始使用>开始使用</a></li>
-<li><a href=#回调>回调</a></li>
-<li><a href=#下一步><strong>下一步</strong></a></li>
-</ul>
-</nav></div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
@@ -170,22 +163,6 @@
 <p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Maui.Toolkit.WeChat.Services.Identity</code>名称空间。</p>
 <p>注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>方法，即可唤起微信登录。</p>
 <p>一般地，了解以上知识即可通过Maui.Toolkit.WeChat使用微信登录，Maui.Toolkit.WeChat将会自动处理登录回调并从微信获取用户信息。</p>
-<h2 id=回调>回调</h2>
-<p>用户在微信中授权登录后，将携带授权码回调到Maui应用程序中。接收到回调请求后，将自动调用<code>IAuthorizationService</code>上的<code>AuthorizeCallbackAsync</code>方法来完成通过微信登录及后续步骤。</p>
-<pre><code>public virtual async Task AuthorizeCallbackAsync(string appId, string appSecret, string code)
-    {
-    
-    // 一些前置卫语句...
-    
-        var token = await _weChatHttpClient.GetTokenAsync(appId, appSecret, code);
-        token.IssuedAt = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-        await _tokenStore.SetAsync(token);
-
-        var userInfo = await _weChatHttpClient.GetUserInfoAsync(token.AccessToken, token.OpenId);
-        await _userInfoStore.SetAsync(userInfo);
-    }
-</code></pre>
-<p>在回调方法中，首先会根据微信的授权码去获取Token，记录Token的颁发时间后将其保存到<code>ITokenStore</code>中。然后获取微信用户的个人信息，并保存到<code>IUserInfoStore</code>中。</p>
 <h2 id=下一步><strong>下一步</strong></h2>
 <ul>
 <li><a href=docs/toolkits/wechat/login/user-info/>用户信息</a>：通过<code>IUserInfoStore</code>获取用户信息</li>
@@ -208,7 +185,7 @@ Sorry to hear that. Please <a href=https://github.com/USERNAME/REPOSITORY/issues
 <div class="text-muted mt-5 pt-3 border-top">
 Last modified
 2021.10.28
-: <a href=https://github.com/realZhangChi/Maui.Toolkit.Docs/commit/c68b655fa1997153fe3ceb3b22f72b35d8e6e65d>Update from Forestry.io ZhangChi updated content/zh-hans/docs/Toolkits/WeChat/login/user-info.md (c68b655)</a>
+: <a href=https://github.com/realZhangChi/Maui.Toolkit.Docs/commit/20cda9873450d78c82aa4f9fa283da360ce4c2e3>Update from Forestry.io ZhangChi updated content/zh-hans/docs/Toolkits/WeChat/login/login.md (20cda98)</a>
 </div>
 </div>
 </main>
