@@ -85,11 +85,7 @@ This the multi-page printable view of this section.
 <ul>
 <li>1.1: <a href=#pg-19f41148165c29066e483e20fa0e2689>简介</a></li>
 <li>1.2: <a href=#pg-307641a19db251774d5bab44800379b8>开始使用</a></li>
-<li>1.3: <a href=#pg-6d03f0adf75bd383cbddef2a3695add0>登录及标识</a></li>
-<ul>
-<li>1.3.1: <a href=#pg-cbbda48bd01efd9b940617f561ff8570>登录</a></li>
-<li>1.3.2: <a href=#pg-3524c64b1cf85d5f8692fdf52f7a3cca>用户信息</a></li>
-</ul>
+<li>1.3: <a href=#pg-fea90f3f5f437f0dfc542d85736d8ace>登录</a></li>
 </ul>
 </ul>
 <div class=content>
@@ -197,38 +193,35 @@ iOS
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-6d03f0adf75bd383cbddef2a3695add0>1.3 - 登录及标识</h1>
-<div class=lead>通过微信登录你的应用，获取用户在微信中的身份标识。</div>
+<h1 id=pg-fea90f3f5f437f0dfc542d85736d8ace>1.3 - 登录</h1>
+<div class=lead>通过微信登录并获取用户信息</div>
 <div class="pageinfo pageinfo-primary">
-<p>此文档将介绍如何使用 Maui.Toolkit.WeChat 来调用微信登录等功能。微信登录功能的详细文档参见<a href=https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html target=_blank>微信开放文档</a>。</p>
+<p>此文档将介绍如何使用 Maui.Toolkit.WeChat 来调用微信登录等功能。微信登录功能的详细文档参见<a href='[https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html](https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html "https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html")' target=_blank>微信开放文档</a>。</p>
 </div>
-</div>
-<div class=td-content>
-<h1 id=pg-cbbda48bd01efd9b940617f561ff8570>1.3.1 - 登录</h1>
-<div class=lead>通过微信登录你的应用。</div>
-<div class="pageinfo pageinfo-primary">
-<p>首先请阅读<a href=https://docs.mauitoolkit.com/zh-hans/docs/toolkits/wechat/get-started/#%E9%85%8D%E7%BD%AE>开始使用</a>章节确保完成与微信交互所需的配置。</p>
-</div>
+<h2 id=登录>登录</h2>
 <p>在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。</p>
-<h2 id=开始使用>开始使用</h2>
-<p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Maui.Toolkit.WeChat.Services.Identity</code>名称空间。</p>
-<p>注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>方法，即可唤起微信登录。</p>
-<p>一般地，了解以上知识即可通过Maui.Toolkit.WeChat使用微信登录，Maui.Toolkit.WeChat将会自动处理登录回调并从微信获取用户信息。</p>
-<h2 id=下一步><strong>下一步</strong></h2>
-<ul>
-<li><a href=docs/toolkits/wechat/login/user-info/>用户信息</a>：通过<code>IUserInfoStore</code>获取用户信息</li>
-</ul>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-3524c64b1cf85d5f8692fdf52f7a3cca>1.3.2 - 用户信息</h1>
-<div class=lead>获取微信中的用户信息。</div>
-<p>使用Maui.Toolkit.WeChat进行微信登录后，会自动获取并保存用户在微信中的个人信息。</p>
-<h2 id=iuserinfostore>IUserInfoStore</h2>
-<p>Maui.Toolkit.WeChat中定义并实现了了IUserInfoStore接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用GetOrNullAsync方法，获取到用户信息UserInfo实例。</p>
-<h2 id=下一步>下一步</h2>
-<ul>
-<li>自定义IUserInfoStore：TODO</li>
-</ul>
+<p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Maui.Toolkit.WeChat.Services.Identity</code>名称空间。注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>，即可唤起微信登录。</p>
+<pre><code>public partial class MainPage : ContentPage
+{
+    private readonly IAuthorizationService _authorizationService;
+
+    public MainPage(IAuthorizationService authorizationService)
+    {
+        _authorizationService = authorizationService;
+    }
+
+    private async void OnAuthorizeClicked(object sender, EventArgs e)
+    {
+        await _authorizationService.AuthorizeAsync();
+    }
+}
+</code></pre>
+<p>用户在微信中授权后，将携带授权码回调，Maui.Toolkit.WeChat将会自动处理回调，根据授权码获取Token，获取用户在微信中的个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。</p>
+<h2 id=token>Token</h2>
+<h2 id=用户信息>用户信息</h2>
+<p>Maui.Toolkit中定义并实现了<code>IUserInfoStore</code>接口。在使用Maui.Toolkit进行微信登录后，即可在任意位置注入接口并调用<code>GetOrNullAsync</code>方法，获取到用户信息<code>UserInfo</code>实例。</p>
+<h2 id=自定义>自定义</h2>
+<p>Maui.Toolkit.WeChat已默认实现了微信登录的相关功能，一般情况下，只需注入并调用接口即可。当需要更复杂的处理的时候，可以轻松对服务进行扩展或替换为自定义实现。</p>
 </div>
 </main>
 </div>
