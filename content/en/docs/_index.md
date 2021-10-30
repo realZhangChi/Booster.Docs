@@ -10,5 +10,5 @@ menu:
 
 
 {{% pageinfo %}}
-Welcome to Maui.Toolkit.Docs!
+Welcome to Booster.Docs!
 {{% /pageinfo %}}

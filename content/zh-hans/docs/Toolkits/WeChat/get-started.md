@@ -4,7 +4,7 @@ linkTitle: "开始使用"
 date: 2021-10-14
 weight: 2
 description: >
-  轻松配置并开始使用 Maui.Toolkit.WeChat
+  轻松配置并开始使用 Booster.WeChat
 ---
 
 ## 前提条件
@@ -17,7 +17,7 @@ description: >
 
 ## 配置
 
-在您的Maui项目中的`MauiProgram.cs`中添加少量的代码即可开始使用Maui.Toolkit.WeChat：
+在您的Maui项目中的`MauiProgram.cs`中添加少量的代码即可开始使用Booster.WeChat：
 
 ``` C#
 public static class MauiProgram
@@ -68,9 +68,9 @@ public static class MauiProgram
 
     ``` C#
     [Activity(
-        Name = "Maui.Toolkit.Sample.WeChatApi.WeChatEntryActivity",
+        Name = "Booster.Sample.WeChatApi.WeChatEntryActivity",
         Exported = true,
-        TaskAffinity = "Maui.Toolkit.Sample",
+        TaskAffinity = "Booster.Sample",
         LaunchMode = LaunchMode.SingleTask)]
     public class WeChatEntryActivity : WeChat.Platforms.Android.WeChatApi.WeChatEntryActivity
     {
@@ -89,6 +89,6 @@ public static class MauiProgram
 
 ## 下一步
 
-以上就是使用Maui.Toolkit.WeChat所需的全部配置，注入服务并开始使用吧！
+以上就是使用Booster.WeChat所需的全部配置，注入服务并开始使用吧！
 
 * [登录](/docs/toolkits/wechat/login/): 通过微信登录您的应用

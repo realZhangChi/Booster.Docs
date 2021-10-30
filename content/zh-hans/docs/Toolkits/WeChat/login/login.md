@@ -11,6 +11,6 @@ description: >
 
 ## 开始使用
 
-Maui.Toolkit.WeChat 在`IAuthorizationService`接口中定义了微信登录，它位于`Maui.Toolkit.WeChat.Services.Identity`名称空间。
+Booster.WeChat 在`IAuthorizationService`接口中定义了微信登录，它位于`Booster.WeChat.Services.Identity`名称空间。
 
 注入接口`IAuthorizationService`并调用`AuthorizeAsync()`方法，即可唤起微信登录。
