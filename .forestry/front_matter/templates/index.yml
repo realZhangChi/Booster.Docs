@@ -1,0 +1,21 @@
+---
+label: index
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  hidden: false
+  default: ''
+  label: title
+- type: text
+  name: linkTitle
+  label: linkTitle
+- type: datetime
+  name: date
+  label: date
+  default: now
+- type: text
+  name: description
+  label: description
