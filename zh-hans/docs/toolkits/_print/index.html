@@ -200,54 +200,53 @@ iOS
 </div>
 <h2 id=登录>登录</h2>
 <p>在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。</p>
-<p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Maui.Toolkit.WeChat.Services.Identity</code>名称空间。注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>来调用微信登录。</p>
-<pre><code>public partial class MainPage : ContentPage
-{
-    private readonly IAuthorizationService _authorizationService;
+<p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Booster.WeChat.Services.Identity</code>名称空间。注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>来调用微信登录。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>partial</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>MainPage</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#000>ContentPage</span>
+<span style=color:#000;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>readonly</span> <span style=color:#000>IAuthorizationService</span> <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>authorizationService</span><span style=color:#000;font-weight:700>;</span>
 
-    public MainPage(IAuthorizationService authorizationService)
-    {
-        _authorizationService = authorizationService;
-    }
+    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>MainPage</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>IAuthorizationService</span> <span style=color:#000>authorizationService</span><span style=color:#000;font-weight:700>)</span>
+    <span style=color:#000;font-weight:700>{</span>
+        <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>authorizationService</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>authorizationService</span><span style=color:#000;font-weight:700>;</span>
+    <span style=color:#000;font-weight:700>}</span>
 
-    private async void OnAuthorizeClicked(object sender, EventArgs e)
-    {
-        await _authorizationService.AuthorizeAsync();
-    }
-}
-</code></pre>
-<p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取<code>Token</code>和个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。使用Maui.Toolkit进行登录后可获取<code>Token</code>和用户信息<code>UserInfo</code>。</p>
+    <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>async</span> <span style=color:#204a87;font-weight:700>void</span> <span style=color:#000>OnAuthorizeClicked</span><span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>object</span> <span style=color:#000>sender</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>EventArgs</span> <span style=color:#000>e</span><span style=color:#000;font-weight:700>)</span>
+    <span style=color:#000;font-weight:700>{</span>
+        <span style=color:#204a87;font-weight:700>await</span> <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>authorizationService</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>AuthorizeAsync</span><span style=color:#000;font-weight:700>();</span>
+    <span style=color:#000;font-weight:700>}</span>
+<span style=color:#000;font-weight:700>}</span>
+</code></pre></div><p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取<code>Token</code>和个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。使用Maui.Toolkit进行登录后可获取<code>Token</code>和用户信息<code>UserInfo</code>。</p>
 <h2 id=token>Token</h2>
 <p>注入<code>ITokenStore</code>接口并调用<code>GetOrNullAsync</code>方法来获取<code>Token</code>。</p>
-<pre><code>public partial class MainPage : ContentPage
-{
-    private readonly ITokenStore _tokenStore;
-    public MainPage(ITokenStore tokenStore)
-    {
-        _tokenStore = tokenStore;
-    }
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>partial</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>MainPage</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#000>ContentPage</span>
+<span style=color:#000;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>readonly</span> <span style=color:#000>ITokenStore</span> <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>tokenStore</span><span style=color:#000;font-weight:700>;</span>
+    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>MainPage</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>ITokenStore</span> <span style=color:#000>tokenStore</span><span style=color:#000;font-weight:700>)</span>
+    <span style=color:#000;font-weight:700>{</span>
+        <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>tokenStore</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>tokenStore</span><span style=color:#000;font-weight:700>;</span>
+    <span style=color:#000;font-weight:700>}</span>
 
-    public async Task&lt;Token&gt; GetToken()
-    {
-        return await _tokenStore.GetOrNullAsync();
-    }
-}
-</code></pre>
-<h2 id=用户信息>用户信息</h2>
+    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>async</span> <span style=color:#000>Task</span><span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>Token</span><span style=color:#000;font-weight:700>&gt;</span> <span style=color:#000>GetToken</span><span style=color:#000;font-weight:700>()</span>
+    <span style=color:#000;font-weight:700>{</span>
+        <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>await</span> <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>tokenStore</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>GetOrNullAsync</span><span style=color:#000;font-weight:700>();</span>
+    <span style=color:#000;font-weight:700>}</span>
+<span style=color:#000;font-weight:700>}</span>
+</code></pre></div><h2 id=用户信息>用户信息</h2>
 <p>注入<code>IUserInfoStore</code>接口并调用<code>GetOrNullAsync</code>方法来获取用户信息。</p>
-<pre><code>public partial class UserInfoPage : ContentPage
-{
-    private readonly IUserInfoStore _userInfoStore;
-    public UserInfoPage(IUserInfoStore userInfoStore)
-    {
-        _userInfoStore = userInfoStore;
-    }
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>partial</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>UserInfoPage</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#000>ContentPage</span>
+<span style=color:#000;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>readonly</span> <span style=color:#000>IUserInfoStore</span> <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>userInfoStore</span><span style=color:#000;font-weight:700>;</span>
+    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#000>UserInfoPage</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>IUserInfoStore</span> <span style=color:#000>userInfoStore</span><span style=color:#000;font-weight:700>)</span>
+    <span style=color:#000;font-weight:700>{</span>
+        <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>userInfoStore</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>userInfoStore</span><span style=color:#000;font-weight:700>;</span>
+    <span style=color:#000;font-weight:700>}</span>
 
-    public async Task&lt;UserInfo&gt; GetUserInfo()
-    {
-        return await _userInfoStore.GetOrNullAsync();
-    }
-}</code></pre>
+    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>async</span> <span style=color:#000>Task</span><span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>UserInfo</span><span style=color:#000;font-weight:700>&gt;</span> <span style=color:#000>GetUserInfo</span><span style=color:#000;font-weight:700>()</span>
+    <span style=color:#000;font-weight:700>{</span>
+        <span style=color:#204a87;font-weight:700>return</span> <span style=color:#204a87;font-weight:700>await</span> <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>userInfoStore</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>GetOrNullAsync</span><span style=color:#000;font-weight:700>();</span>
+    <span style=color:#000;font-weight:700>}</span>
+<span style=color:#000;font-weight:700>}</span>
+</code></pre></div>
 </div>
 </main>
 </div>
