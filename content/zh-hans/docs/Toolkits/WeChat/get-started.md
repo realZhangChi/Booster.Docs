@@ -20,21 +20,13 @@ description: '轻松配置并开始使用 Booster.WeChat
 
 {{% codetab %}}
 
-\`\`\`
-
-Install-Package Booster.WeChat -Version 1.0.0-alpha.3
-
-\`\`\`
+    Install-Package Booster.WeChat -Version 1.0.0-alpha.3
 
 {{% /codetab %}}
 
 {{% codetab %}}
 
-\`\`\`
-
-dotnet add package Booster.WeChat --version 1.0.0-alpha.3
-
-\`\`\`
+    dotnet add package Booster.WeChat --version 1.0.0-alpha.3
 
 {{% /codetab %}}
 
