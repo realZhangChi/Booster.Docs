@@ -26,10 +26,14 @@ aria-controls="tabs-0-net-cli" aria-selected="false">
 &lt;/li>&lt;/ul>
 &lt;div class="tab-content" id="tabs-0-content">
 &lt;div class="tab-pane fade show active" id="tabs-0-package-manager" role="tabpanel" aria-labelled-by="tabs-0-package-manager-tab">
-&lt;br />&lt;p>Install-Package Booster.WeChat -Version 1.0.0-alpha.3&lt;/p>
+&lt;br />&lt;p>```&lt;/p>
+&lt;p>Install-Package Booster.WeChat -Version 1.0.0-alpha.3&lt;/p>
+&lt;p>```&lt;/p>
 &lt;/div>
 &lt;div class="tab-pane fade" id="tabs-0-net-cli" role="tabpanel" aria-labelled-by="tabs-0-net-cli-tab">
-&lt;br />&lt;p>dotnet add package Booster.WeChat &amp;ndash;version 1.0.0-alpha.3&lt;/p>
+&lt;br />&lt;p>```&lt;/p>
+&lt;p>dotnet add package Booster.WeChat &amp;ndash;version 1.0.0-alpha.3&lt;/p>
+&lt;p>```&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;h2 id="配置">配置&lt;/h2>
