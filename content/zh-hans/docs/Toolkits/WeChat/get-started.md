@@ -1,19 +1,36 @@
 ---
-title: "开始使用"
-linkTitle: "开始使用"
+title: 开始使用
+linkTitle: 开始使用
 date: 2021-10-14
-weight: 2
-description: >
-  轻松配置并开始使用 Booster.WeChat
----
+weight: "2"
+description: '轻松配置并开始使用 Booster.WeChat
 
+'
+
+---
 ## 前提条件
 
 已经通过<a href="https://open.weixin.qq.com/cgi-bin/index?t=home/index&lang=zh_CN" target="_blank">微信开放平台</a>创建移动应用及网页应用，并获取他们的**AppId**和**AppSecret**。
 
 ## 引用
 
-*TODO: 添加Nuget包引用。*
+将`Booster.WeChat`包添加到项目引用。
+
+{{< tabs 'Package Manager' '.NET CLI'>}}
+
+{{% codetab %}}
+
+Install-Package Booster.WeChat -Version 1.0.0-alpha.3
+
+{{% /codetab %}}
+
+{{% codetab %}}
+
+dotnet add package Booster.WeChat --version 1.0.0-alpha.3
+
+{{% /codetab %}}
+
+{{< /tabs >}}
 
 ## 配置
 
@@ -28,7 +45,6 @@ public static class MauiProgram
 
         builder
             .UseMauiApp<App>()
-
             // 添加以下代码
             .UseWeChat(
                 new WeChatWebOptions
@@ -42,7 +58,6 @@ public static class MauiProgram
                     AppId = "移动应用的AppId",
                     AppSecret = "移动应用的AppSecret"
                 })
-
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -66,22 +81,22 @@ public static class MauiProgram
 2. 在`WeChatApi`目录下新建类文件`WeChatEntryActivity.cs`
 3. 更改`WeChatEntryActivity.cs`的代码如下：
 
-    ``` C#
-    [Activity(
-        Name = "Booster.Sample.WeChatApi.WeChatEntryActivity",
-        Exported = true,
-        TaskAffinity = "Booster.Sample",
-        LaunchMode = LaunchMode.SingleTask)]
-    public class WeChatEntryActivity : WeChat.Platforms.Android.WeChatApi.WeChatEntryActivity
-    {
-    }
-    ```
+   ``` C#
+   [Activity(
+       Name = "Booster.Sample.WeChatApi.WeChatEntryActivity",
+       Exported = true,
+       TaskAffinity = "Booster.Sample",
+       LaunchMode = LaunchMode.SingleTask)]
+   public class WeChatEntryActivity : WeChat.Platforms.Android.WeChatApi.WeChatEntryActivity
+   {
+   }
+   ```
 
 {{% /codetab %}}
 
 {{% codetab %}}
 
-*TODO*
+_TODO_
 
 {{% /codetab %}}
 
