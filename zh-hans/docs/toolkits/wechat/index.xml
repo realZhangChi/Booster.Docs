@@ -12,7 +12,26 @@
 &lt;h2 id="前提条件">前提条件&lt;/h2>
 &lt;p>已经通过&lt;a href="https://open.weixin.qq.com/cgi-bin/index?t=home/index&amp;lang=zh_CN" target="_blank">微信开放平台&lt;/a>创建移动应用及网页应用，并获取他们的&lt;strong>AppId&lt;/strong>和&lt;strong>AppSecret&lt;/strong>。&lt;/p>
 &lt;h2 id="引用">引用&lt;/h2>
-&lt;p>&lt;em>TODO: 添加Nuget包引用。&lt;/em>&lt;/p>
+&lt;p>将&lt;code>Booster.WeChat&lt;/code>包添加到项目引用。&lt;/p>
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">&lt;a class="nav-link active"
+id="tabs-0-package-manager-tab" data-toggle="tab" href="#tabs-0-package-manager" role="tab"
+aria-controls="tabs-0-package-manager" aria-selected="true">
+Package Manager
+&lt;/a>
+&lt;/li>&lt;li class="nav-item">&lt;a class="nav-link"
+id="tabs-0-net-cli-tab" data-toggle="tab" href="#tabs-0-net-cli" role="tab"
+aria-controls="tabs-0-net-cli" aria-selected="false">
+.NET CLI
+&lt;/a>
+&lt;/li>&lt;/ul>
+&lt;div class="tab-content" id="tabs-0-content">
+&lt;div class="tab-pane fade show active" id="tabs-0-package-manager" role="tabpanel" aria-labelled-by="tabs-0-package-manager-tab">
+&lt;br />&lt;p>Install-Package Booster.WeChat -Version 1.0.0-alpha.3&lt;/p>
+&lt;/div>
+&lt;div class="tab-pane fade" id="tabs-0-net-cli" role="tabpanel" aria-labelled-by="tabs-0-net-cli-tab">
+&lt;br />&lt;p>dotnet add package Booster.WeChat &amp;ndash;version 1.0.0-alpha.3&lt;/p>
+&lt;/div>
+&lt;/div>
 &lt;h2 id="配置">配置&lt;/h2>
 &lt;p>在您的Maui项目中的&lt;code>MauiProgram.cs&lt;/code>中添加少量的代码即可开始使用Booster.WeChat：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-C#" data-lang="C#">&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">static&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">MauiProgram&lt;/span>
@@ -44,19 +63,19 @@
 &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>为使您的应用正常与微信进行交互，需针对移动平台进行配置：&lt;/p>
-&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">&lt;a class="nav-link active"
-id="tabs-0-android-tab" data-toggle="tab" href="#tabs-0-android" role="tab"
-aria-controls="tabs-0-android" aria-selected="true">
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">&lt;li class="nav-item">&lt;a class="nav-link active"
+id="tabs-1-android-tab" data-toggle="tab" href="#tabs-1-android" role="tab"
+aria-controls="tabs-1-android" aria-selected="true">
 Android
 &lt;/a>
 &lt;/li>&lt;li class="nav-item">&lt;a class="nav-link"
-id="tabs-0-ios-tab" data-toggle="tab" href="#tabs-0-ios" role="tab"
-aria-controls="tabs-0-ios" aria-selected="false">
+id="tabs-1-ios-tab" data-toggle="tab" href="#tabs-1-ios" role="tab"
+aria-controls="tabs-1-ios" aria-selected="false">
 iOS
 &lt;/a>
 &lt;/li>&lt;/ul>
-&lt;div class="tab-content" id="tabs-0-content">
-&lt;div class="tab-pane fade show active" id="tabs-0-android" role="tabpanel" aria-labelled-by="tabs-0-android-tab">
+&lt;div class="tab-content" id="tabs-1-content">
+&lt;div class="tab-pane fade show active" id="tabs-1-android" role="tabpanel" aria-labelled-by="tabs-1-android-tab">
 &lt;br />&lt;ol>
 &lt;li>
 &lt;p>在你的Maui项目的&lt;code>/Platforms/Android/&lt;/code>目录下新建文件夹，命名为&lt;code>WeChatApi&lt;/code>&lt;/p>
@@ -77,7 +96,7 @@ iOS
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ol>
 &lt;/div>
-&lt;div class="tab-pane fade" id="tabs-0-ios" role="tabpanel" aria-labelled-by="tabs-0-ios-tab">
+&lt;div class="tab-pane fade" id="tabs-1-ios" role="tabpanel" aria-labelled-by="tabs-1-ios-tab">
 &lt;br />&lt;p>&lt;em>TODO&lt;/em>&lt;/p>
 &lt;/div>
 &lt;/div>

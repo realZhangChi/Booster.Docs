@@ -108,7 +108,22 @@ This the multi-page printable view of this section.
 <h2 id=前提条件>前提条件</h2>
 <p>已经通过<a href="https://open.weixin.qq.com/cgi-bin/index?t=home/index&lang=zh_CN" target=_blank>微信开放平台</a>创建移动应用及网页应用，并获取他们的<strong>AppId</strong>和<strong>AppSecret</strong>。</p>
 <h2 id=引用>引用</h2>
-<p><em>TODO: 添加Nuget包引用。</em></p>
+<p>将<code>Booster.WeChat</code>包添加到项目引用。</p>
+<ul class="nav nav-tabs" id=tabs-0 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-0-package-manager-tab data-toggle=tab href=#tabs-0-package-manager role=tab aria-controls=tabs-0-package-manager aria-selected=true>
+Package Manager
+</a>
+</li><li class=nav-item><a class=nav-link id=tabs-0-net-cli-tab data-toggle=tab href=#tabs-0-net-cli role=tab aria-controls=tabs-0-net-cli aria-selected=false>
+.NET CLI
+</a>
+</li></ul>
+<div class=tab-content id=tabs-0-content>
+<div class="tab-pane fade show active" id=tabs-0-package-manager role=tabpanel aria-labelled-by=tabs-0-package-manager-tab>
+<br><p>Install-Package Booster.WeChat -Version 1.0.0-alpha.3</p>
+</div>
+<div class="tab-pane fade" id=tabs-0-net-cli role=tabpanel aria-labelled-by=tabs-0-net-cli-tab>
+<br><p>dotnet add package Booster.WeChat &ndash;version 1.0.0-alpha.3</p>
+</div>
+</div>
 <h2 id=配置>配置</h2>
 <p>在您的Maui项目中的<code>MauiProgram.cs</code>中添加少量的代码即可开始使用Booster.WeChat：</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>static</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>MauiProgram</span>
@@ -119,7 +134,6 @@ This the multi-page printable view of this section.
 
         <span style=color:#000>builder</span>
             <span style=color:#000;font-weight:700>.</span><span style=color:#000>UseMauiApp</span><span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>App</span><span style=color:#000;font-weight:700>&gt;()</span>
-
             <span style=color:#8f5902;font-style:italic>// 添加以下代码
 </span><span style=color:#8f5902;font-style:italic></span>            <span style=color:#000;font-weight:700>.</span><span style=color:#000>UseWeChat</span><span style=color:#000;font-weight:700>(</span>
                 <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>WeChatWebOptions</span>
@@ -133,7 +147,6 @@ This the multi-page printable view of this section.
                     <span style=color:#000>AppId</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;移动应用的AppId&#34;</span><span style=color:#000;font-weight:700>,</span>
                     <span style=color:#000>AppSecret</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;移动应用的AppSecret&#34;</span>
                 <span style=color:#000;font-weight:700>})</span>
-
             <span style=color:#000;font-weight:700>.</span><span style=color:#000>ConfigureFonts</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>fonts</span> <span style=color:#000;font-weight:700>=&gt;</span>
             <span style=color:#000;font-weight:700>{</span>
                 <span style=color:#000>fonts</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>AddFont</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;OpenSans-Regular.ttf&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#34;OpenSansRegular&#34;</span><span style=color:#000;font-weight:700>);</span>
@@ -146,15 +159,15 @@ This the multi-page printable view of this section.
     <span style=color:#000;font-weight:700>}</span>
 <span style=color:#000;font-weight:700>}</span>
 </code></pre></div><p>为使您的应用正常与微信进行交互，需针对移动平台进行配置：</p>
-<ul class="nav nav-tabs" id=tabs-0 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-0-android-tab data-toggle=tab href=#tabs-0-android role=tab aria-controls=tabs-0-android aria-selected=true>
+<ul class="nav nav-tabs" id=tabs-1 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-1-android-tab data-toggle=tab href=#tabs-1-android role=tab aria-controls=tabs-1-android aria-selected=true>
 Android
 </a>
-</li><li class=nav-item><a class=nav-link id=tabs-0-ios-tab data-toggle=tab href=#tabs-0-ios role=tab aria-controls=tabs-0-ios aria-selected=false>
+</li><li class=nav-item><a class=nav-link id=tabs-1-ios-tab data-toggle=tab href=#tabs-1-ios role=tab aria-controls=tabs-1-ios aria-selected=false>
 iOS
 </a>
 </li></ul>
-<div class=tab-content id=tabs-0-content>
-<div class="tab-pane fade show active" id=tabs-0-android role=tabpanel aria-labelled-by=tabs-0-android-tab>
+<div class=tab-content id=tabs-1-content>
+<div class="tab-pane fade show active" id=tabs-1-android role=tabpanel aria-labelled-by=tabs-1-android-tab>
 <br><ol>
 <li>
 <p>在你的Maui项目的<code>/Platforms/Android/</code>目录下新建文件夹，命名为<code>WeChatApi</code></p>
@@ -175,7 +188,7 @@ iOS
 </code></pre></div></li>
 </ol>
 </div>
-<div class="tab-pane fade" id=tabs-0-ios role=tabpanel aria-labelled-by=tabs-0-ios-tab>
+<div class="tab-pane fade" id=tabs-1-ios role=tabpanel aria-labelled-by=tabs-1-ios-tab>
 <br><p><em>TODO</em></p>
 </div>
 </div>
