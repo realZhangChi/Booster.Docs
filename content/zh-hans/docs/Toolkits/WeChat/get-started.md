@@ -16,7 +16,7 @@ description: '轻松配置并开始使用 Booster.WeChat
 
 将`Booster.WeChat`包添加到项目引用。
 
-{{< tabs 'Package Manager' '.NET CLI'>}}
+{{< tabs "Package Manager" ".NET CLI">}}
 
 {{% codetab %}}
 
