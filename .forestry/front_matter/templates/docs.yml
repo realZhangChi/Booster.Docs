@@ -18,5 +18,3 @@ fields:
 - type: text
   name: description
   label: description
-pages:
-- content/zh-hans/docs/Toolkits/WeChat/login.md
