@@ -10,8 +10,8 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/en"
-defaultContentLanguage = "en"
+contentDir = "content/zh-hans"
+defaultContentLanguage = "zh-hans"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
@@ -33,38 +33,38 @@ blog = "/:section/:year/:month/:day/:slug/"
 
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
 [blackfriday]
-plainIDAnchors = true
-hrefTargetBlank = true
-angledQuotes = false
-latexDashes = true
+  plainIDAnchors = true
+  hrefTargetBlank = true
+  angledQuotes = false
+  latexDashes = true
 
 # Image processing configuration.
 [imaging]
-resampleFilter = "CatmullRom"
-quality = 75
-anchor = "smart"
+  resampleFilter = "CatmullRom"
+  quality = 75
+  anchor = "smart"
 
 [services]
-[services.googleAnalytics]
-# Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
-id = "G-RZ53GGT8VX"
+  [services.googleAnalytics]
+  # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
+  id = "G-RZ53GGT8VX"
 
 # Language configuration
 
 [languages]
-[languages.en]
-title = "Booster"
-description = "A Development Toolkit for Maui."
-languageName ="English"
-# Weight used for sorting.
-weight = 1
-[languages.zh-hans]
-title = "Booster"
-description = "Maui开发工具包"
-languageName ="简体中文"
-contentDir = "content/zh-hans"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
+#  [languages.en]
+#    title = "Booster"
+#    description = "A Development Toolkit for Maui."
+#    languageName ="English"
+#    # Weight used for sorting.
+#    weight = 1
+  [languages.zh-hans]
+    title = "Booster"
+    description = "Maui开发工具包"
+    languageName ="简体中文"
+    contentDir = "content/zh-hans"
+    time_format_default = "2006.01.02"
+    time_format_blog = "2006.01.02"
 
 [markup]
   [markup.goldmark]
