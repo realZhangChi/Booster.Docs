@@ -2,9 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.89.2"><link rel=canonical type=text/html href=https://docs.mauitoolkit.com/docs/>
-<link rel=alternate type=application/rss+xml href=https://docs.mauitoolkit.com/docs/index.xml>
-<meta name=ROBOTS content="NOINDEX, NOFOLLOW">
+<meta name=generator content="Hugo 0.89.2"><meta name=ROBOTS content="INDEX, FOLLOW">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
@@ -15,18 +13,21 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>文档 | Booster</title>
-<meta name=description content="欢迎来到Booster文档库！
-Booster是 .NET MAUI(.NET Multi-platform App UI)的开发工具包，提供了跨平台开发常用的工具，对第三方SDK进行了封装并预先开发了通用的功能，使基于 .NET MAUI 的跨平台开发更轻松。
-">
-<meta property="og:title" content="文档">
-<meta property="og:description" content="Maui开发工具包">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://docs.mauitoolkit.com/docs/"><meta property="og:site_name" content="Booster">
-<meta itemprop=name content="文档">
-<meta itemprop=description content="Maui开发工具包"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="文档">
-<meta name=twitter:description content="Maui开发工具包">
+<title>登录 | Booster</title>
+<meta name=description content="通过微信登录并获取用户信息">
+<meta property="og:title" content="登录">
+<meta property="og:description" content="通过微信登录并获取用户信息">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://docs.mauitoolkit.com/docs/toolkits/wechat/login/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2021-10-28T12:19:52+00:00">
+<meta property="article:modified_time" content="2021-11-13T20:52:41+08:00"><meta property="og:site_name" content="Booster">
+<meta itemprop=name content="登录">
+<meta itemprop=description content="通过微信登录并获取用户信息"><meta itemprop=datePublished content="2021-10-28T12:19:52+00:00">
+<meta itemprop=dateModified content="2021-11-13T20:52:41+08:00">
+<meta itemprop=wordCount content="101">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="登录">
+<meta name=twitter:description content="通过微信登录并获取用户信息">
 <link rel=preload href=/scss/main.min.970faace29912d38459cc02ab65e96f06bb56ef1fd53b99dea569b4800ae862b.css as=style>
 <link href=/scss/main.min.970faace29912d38459cc02ab65e96f06bb56ef1fd53b99dea569b4800ae862b.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -34,7 +35,7 @@ Booster是 .NET MAUI(.NET Multi-platform App UI)的开发工具包，提供了�
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-RZ53GGT8VX',{anonymize_ip:!1})}</script>
 <script>var _hmt=_hmt||[];(function(){var a=document.createElement("script"),b;a.src="https://hm.baidu.com/hm.js?5b251dd680c880130d45041d2c5b8d9c",b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b)})()</script>
 </head>
-<body class=td-section>
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
 <a class=navbar-brand href=/>
@@ -54,172 +55,74 @@ Booster是 .NET MAUI(.NET Multi-platform App UI)的开发工具包，提供了�
 <div class="container-fluid td-outer">
 <div class=td-main>
 <div class="row flex-xl-nowrap">
-<div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+<aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+<div id=td-sidebar-menu class=td-sidebar__inner>
+<form class="td-sidebar__search d-flex align-items-center">
+<button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
+</button>
+</form>
+<nav class="collapse td-sidebar-nav" id=td-section-nav>
+<ul class="td-sidebar-nav__section pr-md-3 ul-0">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docs-li>
+<a href=/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-docs><span>文档</span></a>
+<ul class=ul-1>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsoverview-li>
+<a href=/docs/overview/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsoverview><span>简介</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docstoolkits-li>
+<a href=/docs/toolkits/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docstoolkits><span>工具包</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docstoolkitswechat-li>
+<a href=/docs/toolkits/wechat/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docstoolkitswechat><span>微信</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docstoolkitswechatoverview-li>
+<a href=/docs/toolkits/wechat/overview/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstoolkitswechatoverview><span>简介</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docstoolkitswechatget-started-li>
+<a href=/docs/toolkits/wechat/get-started/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docstoolkitswechatget-started><span>开始使用</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docstoolkitswechatlogin-li>
+<a href=/docs/toolkits/wechat/login/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docstoolkitswechatlogin><span class=td-sidebar-nav-active-item>登录</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
 </div>
-<div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+</aside>
+<aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href=https://github.com/realZhangChi/Booster.Docs/edit/main/content/zh-hans/docs/Toolkits/WeChat/login.md target=_blank><i class="fa fa-edit fa-fw"></i> </a>
+<a href="https://github.com/realZhangChi/Booster.Docs/new/main/content/zh-hans/docs/Toolkits/WeChat/login.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" target=_blank><i class="fa fa-edit fa-fw"></i> </a>
+<a href="https://github.com/realZhangChi/Booster.Docs/issues/new?title=%e7%99%bb%e5%bd%95" target=_blank><i class="fab fa-github fa-fw"></i> </a>
+<a href=https://github.com/realZhangChi/Maui.Toolkit/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> </a>
+<a id=print href=https://docs.mauitoolkit.com/docs/toolkits/wechat/_print/><i class="fa fa-print fa-fw"></i> </a>
 </div>
+</aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
-<div class=td-content>
-<div class="pageinfo pageinfo-primary d-print-none">
-<p>
-<a href=# onclick="return print(),!1"></a>.
-</p><p>
-<a href=/docs/></a>.
-</p>
-</div>
-<h1 class=title>文档</h1>
-<ul>
-<li>1: <a href=#pg-6e17e09fffc1050f46600282def85180>简介</a></li>
-<ul>
-</ul>
-<li>2: <a href=#pg-e92d15c82a3875b846c5ce081ac8da48>工具包</a></li>
-<ul>
-<li>2.1: <a href=#pg-7d102bef46cd8371c0636e3c2848fe92>微信</a></li>
-<ul>
-<li>2.1.1: <a href=#pg-19f41148165c29066e483e20fa0e2689>简介</a></li>
-<li>2.1.2: <a href=#pg-307641a19db251774d5bab44800379b8>开始使用</a></li>
-<li>2.1.3: <a href=#pg-fea90f3f5f437f0dfc542d85736d8ace>登录</a></li>
-</ul>
-</ul>
-</ul>
-<div class=content>
-<p>欢迎来到Booster文档库！</p>
-<p><a href=https://github.com/realZhangChi/Booster>Booster</a>是 <a href=https://github.com/dotnet/maui>.NET MAUI(.NET Multi-platform App UI)</a>的开发工具包，提供了跨平台开发常用的工具，对第三方SDK进行了封装并预先开发了通用的功能，使基于 .NET MAUI 的跨平台开发更轻松。</p>
-</div>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-6e17e09fffc1050f46600282def85180>1 - 简介</h1>
-<div class=lead>什么是<strong>Booster</strong></div>
-<h2 id=maui>MAUI</h2>
-<p>.NET MAUI(.NET Multi-platform App UI) 是 .NET跨平台应用程序开发UI框架，是一个用于构建跨移动、平板电脑和桌面的本机设备应用程序的框架。<a href=https://github.com/dotnet/maui>https://github.com/dotnet/maui</a></p>
-<h2 id=booster>Booster</h2>
-<p><a href=https://github.com/realZhangChi/Booster>Booster</a>是 <a href=https://github.com/dotnet/maui>.NET MAUI(.NET Multi-platform App UI)</a>的开发工具包，提供了跨平台开发常用的工具。Booster为第三方SDK创建原生绑定类库，以原生方式集成第三方功能，并基于此进行了封装，使基于 .NET MAUI 的跨平台开发更轻松。</p>
-<h2 id=易于扩展>易于扩展</h2>
-<p>Booster 充分利用于 .NET 框架的依赖注入系统，可将任一服务替换为自定义的实现。</p>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-e92d15c82a3875b846c5ce081ac8da48>2 - 工具包</h1>
-<div class=lead>Booster 集成了常用的第三方功能，开箱即用，提升你的开发效率。</div>
-</div>
-<div class=td-content>
-<h1 id=pg-7d102bef46cd8371c0636e3c2848fe92>2.1 - 微信</h1>
-<div class=lead>Booster.WeChat 集成了微信开放功能，包括登录、支付、分享等。</div>
-</div>
-<div class=td-content>
-<h1 id=pg-19f41148165c29066e483e20fa0e2689>2.1.1 - 简介</h1>
-<div class=lead>Booster.WeChat 是一个开箱即用的微信工具包，集成了微信开放平台的功能</div>
-<div class="pageinfo pageinfo-primary">
-<p>此文档将介绍如何通过 Booster.WeChat 来使用微信开放平台功能。微信开放平台的详细资料及流程原理等参见<a href=https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html target=_blank>微信开放平台官方文档</a>。</p>
-</div>
-<p>Booster.WeChat 为微信官方的SDK创建了绑定类库，以原生的方式集成了微信的功能。</p>
-<p>Booster.WeChat 将微信开放平台的功能抽象成为接口，并为不同的平台提供了默认的实现，只需调用Booster.WeChat 定义的接口即可使用微信开放平台的功能，使你无需处理繁琐的特定平台的操作。</p>
-<p>微信开放平台支持移动应用和网页应用的对接。在 Booster.WeChat 中，对于Android和iOS等移动端，将采用移动应用的方式；对于Windows及Mac等桌面端，将采用网页应用的方式。</p>
-<h2 id=下一步>下一步</h2>
-<ul>
-<li><a href=/docs/toolkits/wechat/get-started/>开始使用</a>：轻松配置并开始使用 Booster.WeChat</li>
-</ul>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-307641a19db251774d5bab44800379b8>2.1.2 - 开始使用</h1>
-<div class=lead>轻松配置并开始使用 Booster.WeChat</div>
-<h2 id=前提条件>前提条件</h2>
-<p>已经通过<a href="https://open.weixin.qq.com/cgi-bin/index?t=home/index&lang=zh_CN" target=_blank>微信开放平台</a>创建移动应用及网页应用，并获取他们的<strong>AppId</strong>和<strong>AppSecret</strong>。</p>
-<h2 id=引用>引用</h2>
-<p>将<code>Booster.WeChat</code>包添加到项目引用。</p>
-<ul class="nav nav-tabs" id=tabs-0 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-0-package-manager-tab data-toggle=tab href=#tabs-0-package-manager role=tab aria-controls=tabs-0-package-manager aria-selected=true>
-Package Manager
-</a>
-</li><li class=nav-item><a class=nav-link id=tabs-0-net-cli-tab data-toggle=tab href=#tabs-0-net-cli role=tab aria-controls=tabs-0-net-cli aria-selected=false>
-.NET CLI
-</a>
-</li></ul>
-<div class=tab-content id=tabs-0-content>
-<div class="tab-pane fade show active" id=tabs-0-package-manager role=tabpanel aria-labelled-by=tabs-0-package-manager-tab>
-<br><pre><code>Install-Package Booster.WeChat -Version 1.0.0-alpha.3
-</code></pre>
-</div>
-<div class="tab-pane fade" id=tabs-0-net-cli role=tabpanel aria-labelled-by=tabs-0-net-cli-tab>
-<br><pre><code>dotnet add package Booster.WeChat --version 1.0.0-alpha.3
-</code></pre>
-</div>
-</div>
-<h2 id=配置>配置</h2>
-<p>在您的Maui项目中的<code>MauiProgram.cs</code>中添加少量的代码即可开始使用Booster.WeChat：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>static</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>MauiProgram</span>
-<span style=color:#000;font-weight:700>{</span>
-    <span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>static</span> <span style=color:#000>MauiApp</span> <span style=color:#000>CreateMauiApp</span><span style=color:#000;font-weight:700>()</span>
-    <span style=color:#000;font-weight:700>{</span>
-        <span style=color:#204a87;font-weight:700>var</span> <span style=color:#000>builder</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#000>MauiApp</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>CreateBuilder</span><span style=color:#000;font-weight:700>();</span>
-
-        <span style=color:#000>builder</span>
-            <span style=color:#000;font-weight:700>.</span><span style=color:#000>UseMauiApp</span><span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>App</span><span style=color:#000;font-weight:700>&gt;()</span>
-            <span style=color:#8f5902;font-style:italic>// 添加以下代码
-</span><span style=color:#8f5902;font-style:italic></span>            <span style=color:#000;font-weight:700>.</span><span style=color:#000>UseWeChat</span><span style=color:#000;font-weight:700>(</span>
-                <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>WeChatWebOptions</span>
-                <span style=color:#000;font-weight:700>{</span>
-                    <span style=color:#000>AppId</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;网页应用的AppId&#34;</span><span style=color:#000;font-weight:700>,</span>
-                    <span style=color:#000>AppSecret</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;网页应用的AppSecret&#34;</span><span style=color:#000;font-weight:700>,</span>
-                    <span style=color:#000>RedirectUrl</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;网页应用的授权回调地址&#34;</span>
-                <span style=color:#000;font-weight:700>},</span>
-                <span style=color:#204a87;font-weight:700>new</span> <span style=color:#000>WeChatMobileOptions</span><span style=color:#000;font-weight:700>()</span>
-                <span style=color:#000;font-weight:700>{</span>
-                    <span style=color:#000>AppId</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;移动应用的AppId&#34;</span><span style=color:#000;font-weight:700>,</span>
-                    <span style=color:#000>AppSecret</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;移动应用的AppSecret&#34;</span>
-                <span style=color:#000;font-weight:700>})</span>
-            <span style=color:#000;font-weight:700>.</span><span style=color:#000>ConfigureFonts</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>fonts</span> <span style=color:#000;font-weight:700>=&gt;</span>
-            <span style=color:#000;font-weight:700>{</span>
-                <span style=color:#000>fonts</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>AddFont</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#34;OpenSans-Regular.ttf&#34;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#34;OpenSansRegular&#34;</span><span style=color:#000;font-weight:700>);</span>
-            <span style=color:#000;font-weight:700>});</span>
-
-
-        <span style=color:#000>builder</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Services</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>AddSingleton</span><span style=color:#000;font-weight:700>&lt;</span><span style=color:#000>MainPage</span><span style=color:#000;font-weight:700>&gt;();</span>
-
-        <span style=color:#204a87;font-weight:700>return</span> <span style=color:#000>builder</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Build</span><span style=color:#000;font-weight:700>();</span>
-    <span style=color:#000;font-weight:700>}</span>
-<span style=color:#000;font-weight:700>}</span>
-</code></pre></div><p>为使您的应用正常与微信进行交互，需针对移动平台进行配置：</p>
-<ul class="nav nav-tabs" id=tabs-1 role=tablist><li class=nav-item><a class="nav-link active" id=tabs-1-android-tab data-toggle=tab href=#tabs-1-android role=tab aria-controls=tabs-1-android aria-selected=true>
-Android
-</a>
-</li><li class=nav-item><a class=nav-link id=tabs-1-ios-tab data-toggle=tab href=#tabs-1-ios role=tab aria-controls=tabs-1-ios aria-selected=false>
-iOS
-</a>
-</li></ul>
-<div class=tab-content id=tabs-1-content>
-<div class="tab-pane fade show active" id=tabs-1-android role=tabpanel aria-labelled-by=tabs-1-android-tab>
-<br><ol>
-<li>
-<p>在你的Maui项目的<code>/Platforms/Android/</code>目录下新建文件夹，命名为<code>WeChatApi</code></p>
+<nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
+<ol class="breadcrumb spb-1">
+<li class=breadcrumb-item>
+<a href=https://docs.mauitoolkit.com/docs/>文档</a>
 </li>
-<li>
-<p>在<code>WeChatApi</code>目录下新建类文件<code>WeChatEntryActivity.cs</code></p>
+<li class=breadcrumb-item>
+<a href=https://docs.mauitoolkit.com/docs/toolkits/>工具包</a>
 </li>
-<li>
-<p>更改<code>WeChatEntryActivity.cs</code>的代码如下：</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#c4a000>[Activity(
-</span><span style=color:#c4a000>    Name = &#34;Booster.Sample.WeChatApi.WeChatEntryActivity&#34;,
-</span><span style=color:#c4a000>    Exported = true,
-</span><span style=color:#c4a000>    TaskAffinity = &#34;Booster.Sample&#34;,
-</span><span style=color:#c4a000>    LaunchMode = LaunchMode.SingleTask)]</span>
-<span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>WeChatEntryActivity</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#000>WeChat</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Platforms</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>Android</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>WeChatApi</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>WeChatEntryActivity</span>
-<span style=color:#000;font-weight:700>{</span>
-<span style=color:#000;font-weight:700>}</span>
-</code></pre></div></li>
+<li class=breadcrumb-item>
+<a href=https://docs.mauitoolkit.com/docs/toolkits/wechat/>微信</a>
+</li>
+<li class="breadcrumb-item active" aria-current=page>
+<a href=https://docs.mauitoolkit.com/docs/toolkits/wechat/login/>登录</a>
+</li>
 </ol>
-</div>
-<div class="tab-pane fade" id=tabs-1-ios role=tabpanel aria-labelled-by=tabs-1-ios-tab>
-<br><p><em>TODO</em></p>
-</div>
-</div>
-<h2 id=下一步>下一步</h2>
-<p>以上就是使用Booster.WeChat所需的全部配置，注入服务并开始使用吧！</p>
-<ul>
-<li><a href=/docs/toolkits/wechat/login/>登录</a>: 通过微信登录您的应用</li>
-</ul>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-fea90f3f5f437f0dfc542d85736d8ace>2.1.3 - 登录</h1>
+</nav>
+<div class=td-content>
+<h1>登录</h1>
 <div class=lead>通过微信登录并获取用户信息</div>
+<header class=article-meta>
+<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i> 1 </p>
+</header>
 <div class="pageinfo pageinfo-primary">
 <p>此文档将介绍如何使用 Maui.Toolkit.WeChat 来调用微信登录等功能。微信登录功能的详细文档参见<a href='[https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html](https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html "https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html")' target=_blank>微信开放文档</a>。</p>
 </div>
@@ -272,6 +175,25 @@ iOS
     <span style=color:#000;font-weight:700>}</span>
 <span style=color:#000;font-weight:700>}</span>
 </code></pre></div>
+<style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style>
+<div class=d-print-none>
+<h2 class=feedback--title>Feedback</h2>
+<p class=feedback--question>Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+Glad to hear it! Please <a href=https://github.com/USERNAME/REPOSITORY/issues/new>tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+Sorry to hear that. Please <a href=https://github.com/USERNAME/REPOSITORY/issues/new>tell us how we can improve</a>.
+</p>
+</div>
+<script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
+<br>
+<div class="text-muted mt-5 pt-3 border-top">
+2021.11.13
+: <a href=https://github.com/realZhangChi/Booster.Docs/commit/5c4100ae8ebdc247f157b4085bfc8742a3bbd582>Merge branch 'main' of https://github.com/realZhangChi/Booster.Docs (5c4100a)</a>
+</div>
 </div>
 </main>
 </div>
