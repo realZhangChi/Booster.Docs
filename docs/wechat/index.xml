@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Booster – 微信</title><link>https://docs.mauitoolkit.com/docs/toolkits/wechat/</link><description>Recent content in 微信 on Booster</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 14 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.mauitoolkit.com/docs/toolkits/wechat/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 简介</title><link>https://docs.mauitoolkit.com/docs/toolkits/wechat/overview/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/docs/toolkits/wechat/overview/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Booster – 微信</title><link>https://docs.mauitoolkit.com/docs/wechat/</link><description>Recent content in 微信 on Booster</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 14 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://docs.mauitoolkit.com/docs/wechat/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 简介</title><link>https://docs.mauitoolkit.com/docs/wechat/overview/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/docs/wechat/overview/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>此文档将介绍如何通过 Booster.WeChat 来使用微信开放平台功能。微信开放平台的详细资料及流程原理等参见&lt;a href='https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Resource_Center_Homepage.html' target='_blank'>微信开放平台官方文档&lt;/a>。&lt;/p>
 &lt;/div>
@@ -8,7 +8,7 @@
 &lt;h2 id="下一步">下一步&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://docs.mauitoolkit.com/docs/toolkits/wechat/get-started/">开始使用&lt;/a>：轻松配置并开始使用 Booster.WeChat&lt;/li>
-&lt;/ul></description></item><item><title>Docs: 开始使用</title><link>https://docs.mauitoolkit.com/docs/toolkits/wechat/get-started/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/docs/toolkits/wechat/get-started/</guid><description>
+&lt;/ul></description></item><item><title>Docs: 开始使用</title><link>https://docs.mauitoolkit.com/docs/wechat/get-started/</link><pubDate>Thu, 14 Oct 2021 00:00:00 +0000</pubDate><guid>https://docs.mauitoolkit.com/docs/wechat/get-started/</guid><description>
 &lt;h2 id="前提条件">前提条件&lt;/h2>
 &lt;p>已经通过&lt;a href="https://open.weixin.qq.com/cgi-bin/index?t=home/index&amp;lang=zh_CN" target="_blank">微信开放平台&lt;/a>创建移动应用及网页应用，并获取他们的&lt;strong>AppId&lt;/strong>和&lt;strong>AppSecret&lt;/strong>。&lt;/p>
 &lt;h2 id="引用">引用&lt;/h2>
@@ -106,7 +106,7 @@ iOS
 &lt;p>以上就是使用Booster.WeChat所需的全部配置，注入服务并开始使用吧！&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://docs.mauitoolkit.com/docs/toolkits/wechat/login/">登录&lt;/a>: 通过微信登录您的应用&lt;/li>
-&lt;/ul></description></item><item><title>Docs: 登录</title><link>https://docs.mauitoolkit.com/docs/toolkits/wechat/login/</link><pubDate>Thu, 28 Oct 2021 12:19:52 +0000</pubDate><guid>https://docs.mauitoolkit.com/docs/toolkits/wechat/login/</guid><description>
+&lt;/ul></description></item><item><title>Docs: 登录</title><link>https://docs.mauitoolkit.com/docs/wechat/login/</link><pubDate>Thu, 28 Oct 2021 12:19:52 +0000</pubDate><guid>https://docs.mauitoolkit.com/docs/wechat/login/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>此文档将介绍如何使用 Maui.Toolkit.WeChat 来调用微信登录等功能。微信登录功能的详细文档参见&lt;a href='[https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html](https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html "https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html")' target='_blank'>微信开放文档&lt;/a>。&lt;/p>
 &lt;/div>
