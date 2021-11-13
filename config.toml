@@ -10,8 +10,8 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/zh-hans"
-defaultContentLanguage = "zh-hans"
+contentDir = "content/zh"
+defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
@@ -58,13 +58,14 @@ blog = "/:section/:year/:month/:day/:slug/"
 #    languageName ="English"
 #    # Weight used for sorting.
 #    weight = 1
-  [languages.zh-hans]
+  [languages.zh]
     title = "Booster"
     description = "Maui开发工具包"
     languageName ="简体中文"
-    contentDir = "content/zh-hans"
+    contentDir = "content/zh"
     time_format_default = "2006.01.02"
     time_format_blog = "2006.01.02"
+    weight = 1
 
 [markup]
   [markup.goldmark]
@@ -79,8 +80,8 @@ blog = "/:section/:year/:month/:day/:slug/"
 # Everything below this are Site Params
 
 # Comment out if you don't want the "print entire section" link enabled.
-[outputs]
-section = ["HTML", "print", "RSS"]
+#[outputs]
+#section = ["HTML", "print", "RSS"]
 
 [params]
 copyright = "张驰"
@@ -110,7 +111,7 @@ url_latest_version = "https://docs.mauitoolkit.com"
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/realZhangChi/Booster.Docs"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/realZhangChi/Maui.Toolkit"
+github_project_repo = "https://github.com/realZhangChi/Booster"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -149,7 +150,7 @@ footer_about_disable = false
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
 # add "hide_feedback: true" to the page's front matter.
 [params.ui.feedback]
-enable = true
+enable = false
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
 yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
 no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
@@ -158,7 +159,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # If you want this feature, but occasionally need to remove the Reading time from a single page, 
 # add "hide_readingtime: true" to the page's front matter
 [params.ui.readingtime]
-enable = true
+enable = false
 
 [params.links]
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
