@@ -17,7 +17,7 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: content/zh-hans/docs
+  path: content/zh/docs
   label: Docs zh-hans
   create: all
   match: "**/*"
