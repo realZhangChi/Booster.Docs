@@ -5,20 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content/en
-  label: Pages
-  create: all
-  match: "*"
-- type: heading
-  label: Docs
-- type: directory
-  path: content/en/docs
-  label: Docs en
-  create: all
-  match: "**/*"
-- type: directory
   path: content/zh/docs
-  label: Docs zh-hans
+  label: Docs
   create: all
   match: "**/*"
 upload_dir: static/uploads
