@@ -85,7 +85,7 @@ aria-controls="tabs-0-net-cli" aria-selected="false">
 &lt;/div>
 &lt;h2 id="登录">登录&lt;/h2>
 &lt;p>在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。&lt;/p>
-&lt;p>Maui.Toolkit.WeChat 在&lt;code>IAuthorizationService&lt;/code>接口中定义了微信登录，它位于&lt;code>Booster.WeChat.Services.Identity&lt;/code>名称空间。注入接口&lt;code>IAuthorizationService&lt;/code>并调用&lt;code>AuthorizeAsync()&lt;/code>来调用微信登录。&lt;/p>
+&lt;p>Booster.WeChat 在&lt;code>IAuthorizationService&lt;/code>接口中定义了微信登录，它位于&lt;code>Booster.WeChat.Services.Identity&lt;/code>名称空间。注入接口&lt;code>IAuthorizationService&lt;/code>并调用&lt;code>AuthorizeAsync()&lt;/code>以进行微信登录。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-C#" data-lang="C#">&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">partial&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">MainPage&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">ContentPage&lt;/span>
 &lt;span style="color:#000;font-weight:bold">{&lt;/span>
 &lt;span style="color:#204a87;font-weight:bold">private&lt;/span> &lt;span style="color:#204a87;font-weight:bold">readonly&lt;/span> &lt;span style="color:#000">IAuthorizationService&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">_&lt;/span>&lt;span style="color:#000">authorizationService&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
@@ -98,7 +98,37 @@ aria-controls="tabs-0-net-cli" aria-selected="false">
 &lt;span style="color:#204a87;font-weight:bold">await&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">_&lt;/span>&lt;span style="color:#000">authorizationService&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">AuthorizeAsync&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
 &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取&lt;code>Token&lt;/code>和个人信息&lt;code>UserInfo&lt;/code>。&lt;code>Token&lt;/code>和&lt;code>UserInfo&lt;/code>都将存储在设备安全存储空间中。使用Maui.Toolkit进行登录后可获取&lt;code>Token&lt;/code>和用户信息&lt;code>UserInfo&lt;/code>。&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>用户在微信中授权后，微信会携带授权码进行回调。Booster处理微信回调，自动获取&lt;code>Token&lt;/code>和个人信息&lt;code>UserInfo&lt;/code>。&lt;code>Token&lt;/code>和&lt;code>UserInfo&lt;/code>都将存储在设备安全存储空间中。使用Booster进行登录后可获取&lt;code>Token&lt;/code>和用户信息&lt;code>UserInfo&lt;/code>。&lt;/p>
+&lt;h3 id="消息">消息&lt;/h3>
+&lt;p>在处理微信回调时，会尝试从微信获取AccessToken并利用Token获取用户在微信中的个人信息。&lt;/p>
+&lt;p>完成回调处理后，会通过&lt;code>MessagingCenter&lt;/code>发送消息。&lt;/p>
+&lt;pre>&lt;code>MessagingCenter.Send(
+(IAuthorizationService)this,
+AuthorizationMessages.Success,
+AuthorizationMessageArgs.SuccessInstance());
+&lt;/code>&lt;/pre>
+&lt;p>可以在适当的位置订阅&lt;code>IAuthorizationService&lt;/code>发送的&lt;code>AuthorizationMessages.Success&lt;/code>消息以获取登录成功的通知。&lt;/p>
+&lt;pre>&lt;code>MessagingCenter.Subscribe&amp;lt;IAuthorizationService, AuthorizationMessageArgs&amp;gt;(
+this,
+AuthorizationMessages.Success,
+(sender, args) =&amp;gt;
+{
+});
+&lt;/code>&lt;/pre>
+&lt;p>如果回调获取Token失败，会通过&lt;code>MessagingCenter&lt;/code>发送消息。&lt;/p>
+&lt;pre>&lt;code>MessagingCenter.Send(
+(IAuthorizationService)this,
+AuthorizationMessages.Failed,
+AuthorizationMessageArgs.FailedInstance(&amp;quot;Token is NULL!&amp;quot;));
+&lt;/code>&lt;/pre>
+&lt;p>可以在适当的位置订阅&lt;code>IAuthorizationService&lt;/code>发送的&lt;code>AuthorizationMessages.Failed&lt;/code>消息以处理登录失败的场景。&lt;/p>
+&lt;pre>&lt;code>MessagingCenter.Subscribe&amp;lt;IAuthorizationService, AuthorizationMessageArgs&amp;gt;(
+this,
+AuthorizationMessages.Failed,
+(sender, args) =&amp;gt;
+{
+});
+&lt;/code>&lt;/pre>
 &lt;h2 id="token">Token&lt;/h2>
 &lt;p>注入&lt;code>ITokenStore&lt;/code>接口并调用&lt;code>GetOrNullAsync&lt;/code>方法来获取&lt;code>Token&lt;/code>。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-C#" data-lang="C#">&lt;span style="color:#204a87;font-weight:bold">public&lt;/span> &lt;span style="color:#204a87;font-weight:bold">partial&lt;/span> &lt;span style="color:#204a87;font-weight:bold">class&lt;/span> &lt;span style="color:#000">MainPage&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000">ContentPage&lt;/span>

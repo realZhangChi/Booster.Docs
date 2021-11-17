@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.89.2"><meta name=ROBOTS content="INDEX, FOLLOW">
+<meta name=generator content="Hugo 0.89.3"><meta name=ROBOTS content="INDEX, FOLLOW">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
@@ -20,11 +20,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://docs.mauitoolkit.com/docs/wechat/login/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2021-10-28T12:19:52+00:00">
-<meta property="article:modified_time" content="2021-11-15T01:48:49+00:00"><meta property="og:site_name" content="Booster">
+<meta property="article:modified_time" content="2021-11-17T04:20:35+00:00"><meta property="og:site_name" content="Booster">
 <meta itemprop=name content="登录">
 <meta itemprop=description content="通过微信登录并获取用户信息"><meta itemprop=datePublished content="2021-10-28T12:19:52+00:00">
-<meta itemprop=dateModified content="2021-11-15T01:48:49+00:00">
-<meta itemprop=wordCount content="101">
+<meta itemprop=dateModified content="2021-11-17T04:20:35+00:00">
+<meta itemprop=wordCount content="135">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="登录">
 <meta name=twitter:description content="通过微信登录并获取用户信息">
@@ -93,6 +93,17 @@
 <a href="https://github.com/realZhangChi/Booster.Docs/issues/new?title=%e7%99%bb%e5%bd%95" target=_blank><i class="fab fa-github fa-fw"></i> 提交文档问题</a>
 <a href=https://github.com/realZhangChi/Booster/issues/new target=_blank><i class="fas fa-tasks fa-fw"></i> 提交项目问题</a>
 </div>
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li><a href=#登录>登录</a>
+<ul>
+<li><a href=#消息>消息</a></li>
+</ul>
+</li>
+<li><a href=#token>Token</a></li>
+<li><a href=#用户信息>用户信息</a></li>
+</ul>
+</nav></div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
@@ -118,7 +129,7 @@
 </div>
 <h2 id=登录>登录</h2>
 <p>在移动应用中，调用微信登录将唤起微信APP并请求用户授权；在桌面应用中，将访问微信网页应用授权网址以展示二维码。</p>
-<p>Maui.Toolkit.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Booster.WeChat.Services.Identity</code>名称空间。注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>来调用微信登录。</p>
+<p>Booster.WeChat 在<code>IAuthorizationService</code>接口中定义了微信登录，它位于<code>Booster.WeChat.Services.Identity</code>名称空间。注入接口<code>IAuthorizationService</code>并调用<code>AuthorizeAsync()</code>以进行微信登录。</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>partial</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>MainPage</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#000>ContentPage</span>
 <span style=color:#000;font-weight:700>{</span>
     <span style=color:#204a87;font-weight:700>private</span> <span style=color:#204a87;font-weight:700>readonly</span> <span style=color:#000>IAuthorizationService</span> <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>authorizationService</span><span style=color:#000;font-weight:700>;</span>
@@ -133,7 +144,39 @@
         <span style=color:#204a87;font-weight:700>await</span> <span style=color:#0000cf;font-weight:700>_</span><span style=color:#000>authorizationService</span><span style=color:#000;font-weight:700>.</span><span style=color:#000>AuthorizeAsync</span><span style=color:#000;font-weight:700>();</span>
     <span style=color:#000;font-weight:700>}</span>
 <span style=color:#000;font-weight:700>}</span>
-</code></pre></div><p>用户在微信中授权后，微信会携带授权码进行回调。Maui.Toolkit已实现微信回调功能，自动获取<code>Token</code>和个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。使用Maui.Toolkit进行登录后可获取<code>Token</code>和用户信息<code>UserInfo</code>。</p>
+</code></pre></div><p>用户在微信中授权后，微信会携带授权码进行回调。Booster处理微信回调，自动获取<code>Token</code>和个人信息<code>UserInfo</code>。<code>Token</code>和<code>UserInfo</code>都将存储在设备安全存储空间中。使用Booster进行登录后可获取<code>Token</code>和用户信息<code>UserInfo</code>。</p>
+<h3 id=消息>消息</h3>
+<p>在处理微信回调时，会尝试从微信获取AccessToken并利用Token获取用户在微信中的个人信息。</p>
+<p>完成回调处理后，会通过<code>MessagingCenter</code>发送消息。</p>
+<pre><code>MessagingCenter.Send(
+    (IAuthorizationService)this,
+    AuthorizationMessages.Success,
+    AuthorizationMessageArgs.SuccessInstance());
+</code></pre>
+<p>可以在适当的位置订阅<code>IAuthorizationService</code>发送的<code>AuthorizationMessages.Success</code>消息以获取登录成功的通知。</p>
+<pre><code>MessagingCenter.Subscribe&lt;IAuthorizationService, AuthorizationMessageArgs&gt;(
+    this,
+    AuthorizationMessages.Success,
+    (sender, args) =&gt;
+    {
+
+    });
+</code></pre>
+<p>如果回调获取Token失败，会通过<code>MessagingCenter</code>发送消息。</p>
+<pre><code>MessagingCenter.Send(
+    (IAuthorizationService)this,
+    AuthorizationMessages.Failed,
+    AuthorizationMessageArgs.FailedInstance(&quot;Token is NULL!&quot;));
+</code></pre>
+<p>可以在适当的位置订阅<code>IAuthorizationService</code>发送的<code>AuthorizationMessages.Failed</code>消息以处理登录失败的场景。</p>
+<pre><code>MessagingCenter.Subscribe&lt;IAuthorizationService, AuthorizationMessageArgs&gt;(
+    this,
+    AuthorizationMessages.Failed,
+    (sender, args) =&gt;
+    {
+
+    });
+</code></pre>
 <h2 id=token>Token</h2>
 <p>注入<code>ITokenStore</code>接口并调用<code>GetOrNullAsync</code>方法来获取<code>Token</code>。</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#204a87;font-weight:700>public</span> <span style=color:#204a87;font-weight:700>partial</span> <span style=color:#204a87;font-weight:700>class</span> <span style=color:#000>MainPage</span> <span style=color:#000;font-weight:700>:</span> <span style=color:#000>ContentPage</span>
@@ -167,8 +210,8 @@
 </code></pre></div>
 <div class="text-muted mt-5 pt-3 border-top">
 最后修改
-2021.11.15
-: <a href=https://github.com/realZhangChi/Booster.Docs/commit/8a053da6d45b249fa3cfae68c232e84ba49efad1>Update from Forestry.io - Updated Forestry configuration (8a053da)</a>
+2021.11.17
+: <a href=https://github.com/realZhangChi/Booster.Docs/commit/d5f5bf46dd969573907af78c0bcd7d435d7a5a38>Update from Forestry.io ZhangChi updated content/zh/docs/WeChat/login.md (d5f5bf4)</a>
 </div>
 </div>
 </main>
